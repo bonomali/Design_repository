@@ -1,0 +1,485 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="main.css">
+	<meta name="viewport" content="width=device-width" />
+	<script src='jquery-1.9.1.min.js'></script>
+</head>
+<body>
+	<!--#include file="header.html" -->
+		<div id='header'>
+		</div>
+	<div class='container'>
+		<div id="sidebar">
+		<span class='header1'>Advisor search</span>
+		<br><br>
+			<div class='secondary_body'>
+			<form name="input" action="html_form_action.asp" method="get">
+				<input type="text" name="user" placeholder='Search by name' style='width:70%' class='text_input seamless'>
+				<a class='inline primary button' style='width:30%'>Search</a>
+			</form>
+			<div class='secondary_subsection'>
+			
+				<div class='metric_text'>Sort Results</div>
+				
+				<div class='metric_text'>
+					<div class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" checked>
+					      <span>Match %</span>
+					   </label>
+					</div>
+
+					<div class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" checked>
+					      <span>Maven score</span>
+					   </label>
+					</div>
+		
+					
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1"><span>Distance</span>
+					   </label>
+					</span>
+
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1"><span>Last activity</span>
+					   </label>
+					</span>
+					
+
+
+
+				</div>
+
+
+				
+			</div>
+			
+		<div class='question_box secondary_subsection'>
+
+				<span id='question'>Are you seeking ongoing financial guidance, or one-time help with a specific life event?</span>
+				
+				
+				<div class='metric_text answers'>
+					<p id='question1'>
+						<input type='radio'><span>ongoing</span>
+						<input type='radio'><span>one-time</span>
+					</p>
+	
+					<p id='question3'>
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>woman</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>lgbt</span>
+						   </label>
+						</span>
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>married</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>parent</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>20's</span>
+						   </label>
+						</span>
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>30's</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>baby boomer</span>
+						   </label>
+						</span>
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>retired</span>
+						   </label>
+						</span>		
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>business owner</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>inherited wealth</span>
+						   </label>
+						</span>
+														
+					</p>
+					
+					<p id='question2'>
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>investment management</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>budget/debt management</span>
+						   </label>
+						</span>
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>401(k)/403(b) /IRAs
+</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>estate planning</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>retirement</span>
+						   </label>
+						</span>
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>philanthropy</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>employee benefits</span>
+						   </label>
+						</span>
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>mutual<br> funds</span>
+						   </label>
+						</span>		
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>real estate</span>
+						   </label>
+						</span>
+
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>insurance</span>
+						   </label>
+						</span>				
+					</p>
+					
+					<p id='question4'>
+						<input type='radio'>< $50,000
+						<input type='radio'>< $250,000<br>
+						<input type='radio'>< $500,000
+						<input type='radio'>< $1,000,000<br>
+						<input type='radio'>> $2,000,000					
+					</p>	
+
+					<p id='question5'>
+						<input type="range" class='range' min='0' max='7' data-highlight='true'>
+						<span style='margin-top:30px'> not at all <span class=' right'> extremely</span></span>
+					</p>												
+
+					<p id='question6'>
+						<input type="range" class='range' min='0' max='7' data-highlight='true'>
+						<span style='margin-top:30px'> never <span class=' right'> daily</span></span>
+					</p>	
+					
+					<p id='question7'>
+						<input type="range" class='range' min='0' max='7' data-highlight='true'>
+						<span style='margin-top:30px'> mostly sell <span class=' right'> buy more</span></span>
+					</p>							
+
+					<p id='question8'>
+						<input type="range" class='range' min='0' max='7' data-highlight='true'>
+						<span style='margin-top:30px'> less<span class=' right'> more</span></span>
+					</p>	
+
+					<p id='question9'>
+						<input type="range" class='range' min='0' max='7' data-highlight='true'>
+						<span style='margin-top:30px'> it's not <span class=' right'> extremely</span></span>
+					</p>	
+					
+					<p id='question10'>
+						<input type="range" class='range' min='0' max='7' data-highlight='true'>
+						<span style='margin-top:30px'> annually <span class=' right'> daily</span></span>
+					</p>						
+				</div>		
+				<br>
+				<a class='primary button' onclick='next_question()'>Next</a>				
+				
+				
+				
+				
+			<div style=''>
+
+			</div>
+		</div>		
+								
+			</div>
+	
+
+			
+			
+			<br>
+
+			<div class='search' style='display:none'>
+			
+				<div class='search_header'>Filter Results</div>
+				<div class='comment_body border_bottom'>
+					<div class='filter_title'>Commission structure</div>
+					
+					<span class="ck-button " >
+					   <label>
+					      <input type="checkbox" value="1"checked><span>Fee only</span>
+					   </label>
+					</span>	
+					<br>					
+					<span class="ck-button " >
+					   <label>
+					      <input type="checkbox" value="1"checked><span>Commission only</span>
+					   </label>
+					</span>	
+
+					<span class="ck-button " >
+					   <label>
+					      <input type="checkbox" value="1"checked><span>Fee plus commission</span>
+					   </label>
+					</span>	
+					
+				</div>				
+				<div class='comment_body border_bottom'>
+					<div class='filter_title'>Minimum asset requirement</div>
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" checked><span>None</span>
+					   </label>
+					</span>
+										
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" checked><span>$50,000+</span>
+					   </label>
+					</span>	
+
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1"  checked><span>$100,000+</span>
+					   </label>
+					</span>		
+									
+					<span class="ck-button half" >
+					   <label> 
+					      <input type="checkbox" value="1"  checked><span>$250,000+</span>
+					   </label>
+					</span>		
+					
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" checked ><span>$500,000+</span>
+					   </label>
+					</span>		
+									
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1"  checked><span>$1,000,000+</span>
+					   </label>
+					</span>	
+				</div>	
+				
+
+				<div class='comment_body '>
+					<div class='filter_title'>Language preference</div>
+					<span class="ck-button half" >
+					   <label>
+					      <input type="radio" value="1" checked><span>None</span>
+					   </label>
+					</span>
+										
+					<span class="ck-button half" >
+					   <label>
+					      <input type="radio" value="1"><span>Spanish</span>
+					   </label>
+					</span>	
+										
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" ><span>Mandarin</span>
+					   </label>
+					</span>	
+										
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" ><span>Cantonese</span>
+					   </label>
+					</span>		
+								
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" ><span>Tagalog</span>
+					   </label>
+					</span>		
+									
+					<span class="ck-button half" >
+					   <label> 
+					      <input type="checkbox" value="1" ><span>Russian</span>
+					   </label>
+					</span>		
+					
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" ><span>Hindi</span>
+					   </label>
+					</span>		
+									
+					<span class="ck-button half" >
+					   <label>
+					      <input type="checkbox" value="1" ><span>Vietnamese</span>
+					   </label>
+					</span>						
+					
+					
+			
+
+				</div>
+				
+			</div>
+	
+		</div>
+		
+		<div id='main'>
+			<div class='search_result'>
+
+				<div class='hoverable advisor_entry' onclick="location.href='advisor.html';">
+					<img src='assets/peter.jpg' class='advisor_pic '>
+					<div class='search_body'>
+						<div class='name_block cell'>
+							<span class='header2'>Peter Karp</span> 
+							<br>
+							<span class='footnote place'>San Francisco, CA <br></span>
+							<span class='footnote'>Specializes in <pop>investments</pop></span>
+	
+						</div>
+						<div class='niche cell fifth footnote'>
+							Recommended by	<pop>business owners, retirees</pop>
+						</div>
+						<span  class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>99 &#10029</span>	
+						</span>
+					</div>
+				</div>
+				<div class='hoverable advisor_entry'>
+				<img src='assets/david.jpg' class='advisor_pic '>
+	
+					<div class='search_body '>
+						<span class='name_block cell'>
+							<span class='header2'>David Dean</span> 
+							<br>
+							<span class='footnote place'>Berkeley, CA <br></span>
+							<span class='footnote'>Specializes in <pop>retirement</pop></span>
+	
+						</span>
+						<div class='niche cell fifth footnote'>Recommended by	<pop>baby boomers</pop>
+						</div>
+						<span  class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>41 &#10029</span>	
+						</span>
+					</div>
+				</div>
+
+				<div class='hoverable advisor_entry'>
+				<img src='assets/kathleen.jpg' class='advisor_pic '>
+	
+					<div class='search_body '>
+						<span class='name_block cell'>
+							<span class='header2'>Kathleen Hentges</span> 
+							<br>
+							<span class='footnote place'>Oakland, CA <br></span>
+							<span class='footnote'>Specializes in <pop>investments</pop></span>
+	
+						</span>
+						<div class='niche cell fifth footnote'>Recommended by	<pop>parents</pop>
+						</div>
+						<span  class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>73 &#10029</span>	
+						</span>
+					</div>
+				</div>
+
+				<div class='hoverable advisor_entry'>
+				<img src='assets/sabrina.jpg' class='advisor_pic '>
+	
+					<div class='search_body '>
+						<span class='name_block cell'>
+							<span class='header2'>Sabrina F. Lowell</span> 
+							<br>
+							<span class='footnote place'>San Francisco, CA <br></span>
+							<span class='footnote'>Specializes in <pop>charity</pop></span>
+	
+						</span>
+						<div class='niche cell fifth footnote'>Recommended by	<pop>women</pop>
+						</div>
+						<span class='numbers'>
+							<span class='match_percentage'>?? match</span>							
+							<span class='maven_score'>12 &#10029</span>	
+						</span>
+					</div>
+				</div>
+
+				<div class='hoverable advisor_entry'>
+				<img src='assets/seton.jpg' class='advisor_pic '>
+	
+					<div class='search_body '>
+						<span class='name_block cell'>
+							<span class='header2'>Seton McAndrews</span> 
+							<br>
+							<span class='footnote place'>San Francisco, CA <br></span>
+							<span class='footnote'>Specializes in <pop>retirement</pop></span>
+	
+						</span>
+						<div class='niche cell fifth footnote'>Recommended by	<pop>inheritors, baby boomers</pop>
+						</div>
+						<span  class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>27 &#10029</span>	
+						</span>
+					</div>
+				</div>
+			</div>	
+	
+	</div>
+	</div>	
+	<script src='maven.js'></script>
+ 
+</body>
