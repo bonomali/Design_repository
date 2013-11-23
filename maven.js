@@ -51,7 +51,7 @@ function confirm_reply() {
 function followup() {
 	$('.followup_button').attr('style','display:none');
 	$('.followup_entry').attr('style','display:inline');	
-	$('.followup_section').append("<div class='comment_reply footnote new'></div>");	
+	$('.followup_section').append("<div class='comment_reply new'></div>");	
 	$('.new').append("<textarea class='seamless' placeholder='Type your comment here'></textarea>");
 	$('.seamless').toggleClass('open');
 	$('.new textarea').focus();
