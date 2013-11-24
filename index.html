@@ -6,6 +6,30 @@
 
 </head>
 <body id='background_splash'>
+
+	<div class='modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Log in</span>
+									<a class='green right password_change'>First time here?</a>
+
+				<form>
+					<label>Email </label><input type='text' class="text_input" value='current@email.com'><br>
+					<label>Password</label> <input type='password' class="text_input">
+					<div class='new_password'>
+ <br>
+						<label>Confirm password</label> <input type='password'class="text_input">
+				 	</div>
+				</form>
+
+				
+
+					
+
+			</div>		
+		</div>
+	</div>
 	<div class='container'>
 		<div id='header'>
 			<img src="assets/LOGO-Maven.png">
@@ -18,9 +42,11 @@
 			<div class='header2'>Get your questions answered by top professionals</div>
 			<a class='primary button' onclick="window.location='question.html';">Ask a question</a>
 			
-			
+			<a onclick='show_modal()'>Log in</a>
 		</div>
 	</div>
+	<script src='maven.js'></script>
+
 </body>
 
 </html>
