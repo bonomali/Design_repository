@@ -5,7 +5,26 @@
 	<script src='jquery-1.9.1.min.js'></script>
 </head>
 <body>
-	<!--#include file="header.html" -->
+	<div class='modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Compose message</span>
+				To:<pop id='advisor_name'></pop>
+				<p>
+				<textarea rows='6' class='full text_input' placeholder='Write your message here'></textarea>
+				</p>
+				<div class='half'>
+					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
+					<a class='primary paired button'>Send</a>					
+				</div>	
+			</div>		
+		</div>
+	</div>
+	<div id='top_banner' onclick='multi_message_confirm()'>
+			To write multiple advisors, select them and click here
+			<a class='right' onclick='multi_message_cancel()'>cancel</a> 
+	</div>
 		<div id='header'>
 		</div>
 	<div class='container'>
@@ -17,6 +36,9 @@
 				<input type="text" name="user" placeholder='Search by name' style='width:70%' class='text_input seamless'>
 				<a class='inline primary button' style='width:30%'>Search</a>
 			</form>
+			<div class='secondary_subsection'>
+			<a onclick='multi_message()' id='sdfsdf'>Multi-message</a>
+			</div>
 			<div class='secondary_subsection'>
 			
 				<div class='metric_text'>Sort Results</div>
@@ -378,7 +400,7 @@
 		<div id='main'>
 			<div class='search_result'>
 
-				<div class='hoverable advisor_entry' onclick="location.href='advisor.html';">
+				<div class='hoverable advisor_entry' >
 						<img src='assets/peter.jpg' class='advisor_pic cell'>
 						<div class='name_block cell'>
 							<span class='header2'>Peter Karp</span> 
@@ -387,7 +409,7 @@
 							<span class='footnote'>Specializes in <pop>investments</pop></span>
 	
 						</div>
-						<div class='niche cell fifth footnote'>
+						<div class='niche cell footnote'>
 							Recommended by	<pop>business owners, retirees</pop>
 						</div>
 						<span  class='numbers cell'>
@@ -405,7 +427,7 @@
 							<span class='footnote'>Specializes in <pop>retirement</pop></span>
 	
 						</span>
-						<div class='niche cell fifth footnote'>Recommended by	<pop>baby boomers</pop>
+						<div class='niche cell footnote'>Recommended by	<pop>baby boomers</pop>
 						</div>
 						<span  class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						
@@ -423,7 +445,7 @@
 							<span class='footnote'>Specializes in <pop>investments</pop></span>
 	
 						</span>
-						<div class='niche cell fifth footnote'>Recommended by	<pop>parents</pop>
+						<div class='niche cell footnote'>Recommended by	<pop>parents</pop>
 						</div>
 						<span  class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						
@@ -441,7 +463,7 @@
 							<span class='footnote'>Specializes in <pop>charity</pop></span>
 	
 						</span>
-						<div class='niche cell fifth footnote'>Recommended by	<pop>women</pop>
+						<div class='niche cell footnote'>Recommended by	<pop>women</pop>
 						</div>
 						<span class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						
@@ -459,7 +481,7 @@
 							<span class='footnote'>Specializes in <pop>retirement</pop></span>
 	
 						</span>
-						<div class='niche cell fifth footnote'>Recommended by	<pop>inheritors, baby boomers</pop>
+						<div class='niche cell footnote'>Recommended by	<pop>inheritors, baby boomers</pop>
 						</div>
 						<span  class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						

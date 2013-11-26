@@ -47,6 +47,7 @@ body{
 }
 
 .modal {
+	padding:100px 15px 0px 15px;
 	position:fixed;
 	top:0;
 	z-index: 3000;
@@ -59,11 +60,8 @@ body{
 }
 
 .modal_window {
-	width:100%;
 	max-width: 600px;
 	margin:0 auto;
-	margin-top:100px;
-	
 	}
 	
 #header{
@@ -120,7 +118,6 @@ pop {
 	font-family: Adelle_Light;
 	font-size: 2em;
 	padding:15px 0px 15px 0px;
-	margin-bottom: 30px;
 	}
 
 .header2 {
@@ -346,6 +343,9 @@ margin-left:5px;
 	padding:30px;
 	border-bottom:1px solid #ddd
 }
+.subsection:last-child {
+	border:none;
+}
 #main_box {
 	width:400px;
 	background-color: white;
@@ -385,6 +385,7 @@ margin-left:5px;
 	border-top:1px solid #eee;
 	padding: 10px 0px 10px 0px;
 	color:inherit;
+	display: table;
 }
 
 .comment_reply:last-child {
@@ -411,10 +412,10 @@ margin-left:5px;
 }
 
 .advisor_entry {
-		background-color:white;
-		padding:10px;
-	  	border-bottom:1px solid #eee;
-
+	background-color:white;
+	padding:10px;
+  	border-bottom:1px solid #eee;
+	display:table;	  	
 }
 
 .question_entry {
@@ -441,17 +442,17 @@ margin-left:5px;
 }
 
 .name_block {
-	width:35%;
+	width:38%;
 	vertical-align: middle;
 	display:table-cell;
 }
 
 .niche {
-	width:30%;
+	width:38%;
 }
 
 .cell {
-	display: inline-block;
+	display: table-cell;
 	vertical-align: middle;
 }
 #top_results {
@@ -621,8 +622,6 @@ input[type=password]
 
 /* Menu */
 
-
-	
 #header img {
 	padding-top:20px;
 }
@@ -644,7 +643,7 @@ input[type=password]
 }
 
 .numbers {
-	width:95px;
+	width:90px;
 	line-height: 1.8em;
 	text-align: right;
 }
@@ -664,32 +663,39 @@ input[type=password]
 /* Inbox */
 
 #list {
-	
+	margin-top: 30px;
 }
 
 .list_item {
 	display:table;
 	padding:5px;
 	border: 1px 0px 1px 0px;
-	border-top:1px solid #ccc;
+	border-top:1px solid #eee;
 	width:100%;
 	background: #fff;
+	cursor: hand;
+
 }
 
 .list_item img {
 	width:30px;
-	margin-right: 10px;
+	margin-right: 20px;
 	display:inline-block;
 }
 .list_item div {
 	display: table-cell;
 	vertical-align: middle;
+	width:90%
+}
+
+.status {
+	font-size: 1.6em;
+}
+.read  {
+	background:none;
 }
 
 
-.read img, .read div {
-	opacity:0.3;
-}
 /* Question page */
 
 .upvote {
@@ -697,6 +703,7 @@ input[type=password]
 	line-height: 1.1em;
 	color: #aaa;
 	cursor: pointer;
+	vertical-align: top;
 }
 .upvote:link {
 }
@@ -707,7 +714,17 @@ input[type=password]
 	opacity:0.8;
 }
 	
-	
+/* Search page */
+
+#top_banner {
+	background:white;
+	border-bottom: 2px solid #5bb75b;
+	padding:10px;
+	display:none;
+	text-align: center;
+}	
+
+
 /* Account Settings page */
 
 .password_change:active {

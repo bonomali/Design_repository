@@ -17,6 +17,47 @@ function hide_modal(){
 	$('.modal').attr('style','display:none');
 }		    
 
+function send_message() {
+	hide_modal();
+	$('#top_banner').show(200).delay(2000).hide(200);
+}
+
+
+//Search page
+$('.advisor_entry').attr('onclick', "location.href='advisor.html'");
+
+function multi_message(target) {												//sets each advisor entry to add the advisor's name to the recipients list per 'onclick'
+	$('#top_banner').show();
+	alert('To write multiple recipients simultaneously, select them and press OK to begin composing');
+	//alert($(target).attr('id'))
+	$('.advisor_entry').attr('onclick', "add_recipient(this)");	
+}
+
+
+window.recipients=['Jim', 'Bob'];									//object array with names of all recipients to receive this message
+
+function add_recipient(target) {									//
+	var name= $(target).select('.name_block .cell').attr('class');
+	alert(name);
+	$(target).getElementsByClassName('numbers').remove();
+}
+
+function multi_message_confirm() {
+	show_modal();
+	for (var i=0; i<recipients.length; i++) {		//populates the 'To' field with the names of all advisors receiving this message
+		$('#advisor_name').append(recipients[i])
+		
+		if (i!=recipients.length-1){				//adds comma after each name except the last advisor's name
+		$('#advisor_name').append(', ')
+		}	
+	}
+
+}
+
+function multi_message_cancel() {
+	$('#top_banner').hide(200);
+
+}
 //Question page
 
 //Upvote functionality
@@ -51,7 +92,7 @@ function confirm_reply() {
 function followup() {
 	$('.followup_button').attr('style','display:none');
 	$('.followup_entry').attr('style','display:inline');	
-	$('.followup_section').append("<div class='comment_reply new'></div>");	
+	$('.followup_section').append("<div class='comment_reply footnote new'></div>");	
 	$('.new').append("<textarea class='seamless' placeholder='Type your comment here'></textarea>");
 	$('.seamless').toggleClass('open');
 	$('.new textarea').focus();
