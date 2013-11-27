@@ -60,6 +60,8 @@ body{
 }
 
 .modal_window {
+	background:white;
+	border:1px solid #ccc;
 	max-width: 600px;
 	margin:0 auto;
 	}
@@ -385,7 +387,6 @@ margin-left:5px;
 	border-top:1px solid #eee;
 	padding: 10px 0px 10px 0px;
 	color:inherit;
-	display: table;
 }
 
 .comment_reply:last-child {
@@ -415,7 +416,6 @@ margin-left:5px;
 	background-color:white;
 	padding:10px;
   	border-bottom:1px solid #eee;
-	display:table;	  	
 }
 
 .question_entry {
@@ -442,17 +442,19 @@ margin-left:5px;
 }
 
 .name_block {
-	width:38%;
+	width:28%;
+	min-width: 180px;
 	vertical-align: middle;
 	display:table-cell;
+	margin-right:4%;
 }
 
 .niche {
-	width:38%;
+	width:32%;
 }
 
 .cell {
-	display: table-cell;
+	display: inline-block;
 	vertical-align: middle;
 }
 #top_results {
@@ -472,6 +474,10 @@ margin-left:5px;
 }
 .secondary_subsection {
 		padding:15px;
+		border-top: 1px solid #eee;
+}
+.secondary_body form {
+		padding:0px 10px 0px 10px;
 		border-top: 1px solid #eee;
 
 }
@@ -652,25 +658,35 @@ input[type=password]
 .question_banner {
 	background-color:white;
 	padding:10px;
-	width:100%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	border:3px solid #5bb75b;
 }
 
 #hamburger {
 	display:none;
 }
 
+/* Landing page */
+.login {
+	max-width:400px;
+}
+.facebook {
+	background-image: linear-gradient(#4063b3, #3c599d);
+	color:white;
+}
 /* Inbox */
 
 #list {
 	margin-top: 30px;
+	border-top:1px solid #ccc;
+	
 }
 
 .list_item {
 	display:table;
 	padding:5px;
 	border: 1px 0px 1px 0px;
-	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
 	width:100%;
 	background: #fff;
 	cursor: hand;
@@ -690,11 +706,17 @@ input[type=password]
 
 .status {
 	font-size: 1.6em;
+	color:#5bb75b;
+
 }
 .read  {
 	background:none;
 }
 
+.read .status {
+	color:#aaa;
+	font-family: monospace;
+}
 
 /* Question page */
 
@@ -782,10 +804,17 @@ input[type=password]
 	left:0px;
 	z-index:10;
 	background:white;
-	width:1000%;
-	border-top:1px solid #ddd;
-	padding:4px 0px 0px 16px;
+	width:100%;
+	border-top: 2px solid #5bb75b;
 	overflow-y: scroll;
+
+}
+
+#list_slider {
+	white-space: nowrap;
+	padding:8px 0px 0px 16px;
+	overflow-x: scroll;
+	overflow-y: hidden;
 }
 
 #list hoverable:hover {
@@ -799,10 +828,15 @@ input[type=password]
 	padding:0px;
 	background:inherit;
 }
+
 .list_item img {
 	width:60px;
 	margin:0px;
 }
+.read img {
+	opacity:0.3;
+}
+
 #pointer {
 	position:absolute;
 	left:90%;
@@ -814,6 +848,13 @@ input[type=password]
 	display:none;
 }
 
+.active img {
+	border-bottom: 6px solid #5bb75b;
+}
+
+.hoverable:hover {
+	border:none;
+}
 #main {
 	height:inherit;
 }

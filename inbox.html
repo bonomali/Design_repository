@@ -12,42 +12,43 @@
 		<div id="sidebar">
 			<span class='header1'>Inbox</span>
 			<div id='list'>
-				<div class='list_item hoverable'>
+				<div id='list_slider'>
+				<div class='list_item hoverable active'>
 					<img src='assets/kathleen.jpg' class=''>
-					<div class=''>
+					<div class='list_item_text'>
 						<div class='header3'>Kathleen Henteges</div>
 						<span class='footnote'>wrote you 2 minutes ago</span>
 					</div>
-					<div class='status green'>
+					<div class='status'>
 					&#9679;
 					</div>
 				</div>
 
 				<div class='list_item hoverable'>
 					<img src='assets/peter.jpg' class=''>
-					<div class=''>
+					<div class='list_item_text'>
 						<div class='header3'>Peter Karp</div>
 						<span class='footnote'>wrote you 37 minutes ago</span>
 					</div>
-					<div class='status green'>
+					<div class='status'>
 					&#9679;
 					</div>					
 				</div>
 
 				<div class='list_item hoverable'>
 					<img src='assets/david.jpg' class=''>
-					<div class=''>
+					<div class='list_item_text'>
 						<div class='header3'>David Dean</div>
 						<span class='footnote'>replied 2 minutes ago</span>
 					</div>
-					<div class='status green'>
+					<div class='status'>
 					&#9679;
 					</div>					
 				</div>
 				
 				<div class='list_item hoverable read'>
 					<img src='assets/sabrina.jpg' class=''>
-					<div >
+					<div class='list_item_text'>
 						<div class='header3'>Sabrina Lowell</div>
 						<span class='footnote'>you've replied</span>
 					</div>
@@ -58,7 +59,7 @@
 
 				<div class='list_item hoverable read'>
 					<img src='assets/seton.jpg' class=''>
-					<div class=''>
+					<div class='list_item_text'>
 						<div class='header3'>Seton McAndrews</div>
 						<span class='footnote'> you've replied</span>
 					</div>
@@ -67,7 +68,7 @@
 					</div>					
 				</div>
 
-
+				</div>
 			</div>
 		</div>
 		
@@ -97,7 +98,7 @@ Investment real estate has tax advantages of its own, including the deferral of 
 				</div>
 				</div>
 				<div class='footer_links'>			
-					<a class='metric_text green followup_button' onclick='followup()'>reply</a>
+					<a class='metric_text green followup_button' onclick='reply_message()'>reply</a>
 					<div class='followup_entry'>
 						<a class='metric_text' onclick='cancel_followup()'>Cancel</a>
 						<a class='metric_text green' onclick='confirm_followup()'>submit</a>

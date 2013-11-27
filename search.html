@@ -21,8 +21,8 @@
 			</div>		
 		</div>
 	</div>
-	<div id='top_banner' onclick='multi_message_confirm()'>
-			To write multiple advisors, select them and click here
+	<div id='top_banner'>
+			<span onclick='multi_message_confirm()'>Select recipients, then tap here to compose message</span>
 			<a class='right' onclick='multi_message_cancel()'>cancel</a> 
 	</div>
 		<div id='header'>
@@ -34,10 +34,10 @@
 			<div class='secondary_body'>
 			<form name="input" action="html_form_action.asp" method="get">
 				<input type="text" name="user" placeholder='Search by name' style='width:70%' class='text_input seamless'>
-				<a class='inline primary button' style='width:30%'>Search</a>
+				<a class='inline right' style=''>Search</a>
 			</form>
 			<div class='secondary_subsection'>
-			<a onclick='multi_message()' id='sdfsdf'>Multi-message</a>
+			<div onclick='multi_message()' class='metric_text' id='sdfsdf'>message multiple advisors</div>
 			</div>
 			<div class='secondary_subsection'>
 			
@@ -79,192 +79,7 @@
 
 				
 			</div>
-			
-		<div class='question_box secondary_subsection'>
 
-				<span id='question'>Are you seeking ongoing financial guidance, or one-time help with a specific life event?</span>
-				
-				
-				<div class='metric_text answers'>
-					<p id='question1'>
-						<input type='radio'><span>ongoing</span>
-						<input type='radio'><span>one-time</span>
-					</p>
-	
-					<p id='question3'>
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>woman</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>lgbt</span>
-						   </label>
-						</span>
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>married</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>parent</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>20's</span>
-						   </label>
-						</span>
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>30's</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>baby boomer</span>
-						   </label>
-						</span>
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>retired</span>
-						   </label>
-						</span>		
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>business owner</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>inherited wealth</span>
-						   </label>
-						</span>
-														
-					</p>
-					
-					<p id='question2'>
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>investment management</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>budget/debt management</span>
-						   </label>
-						</span>
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>401(k)/403(b) /IRAs
-</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>estate planning</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>retirement</span>
-						   </label>
-						</span>
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>philanthropy</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>employee benefits</span>
-						   </label>
-						</span>
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>mutual<br> funds</span>
-						   </label>
-						</span>		
-						
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>real estate</span>
-						   </label>
-						</span>
-
-						<span class="ck-button half" >
-						   <label>
-						      <input type="checkbox" value="1"><span>insurance</span>
-						   </label>
-						</span>				
-					</p>
-					
-					<p id='question4'>
-						<input type='radio'>< $50,000
-						<input type='radio'>< $250,000<br>
-						<input type='radio'>< $500,000
-						<input type='radio'>< $1,000,000<br>
-						<input type='radio'>> $2,000,000					
-					</p>	
-
-					<p id='question5'>
-						<input type="range" class='range' min='0' max='7' data-highlight='true'>
-						<span style='margin-top:30px'> not at all <span class=' right'> extremely</span></span>
-					</p>												
-
-					<p id='question6'>
-						<input type="range" class='range' min='0' max='7' data-highlight='true'>
-						<span style='margin-top:30px'> never <span class=' right'> daily</span></span>
-					</p>	
-					
-					<p id='question7'>
-						<input type="range" class='range' min='0' max='7' data-highlight='true'>
-						<span style='margin-top:30px'> mostly sell <span class=' right'> buy more</span></span>
-					</p>							
-
-					<p id='question8'>
-						<input type="range" class='range' min='0' max='7' data-highlight='true'>
-						<span style='margin-top:30px'> less<span class=' right'> more</span></span>
-					</p>	
-
-					<p id='question9'>
-						<input type="range" class='range' min='0' max='7' data-highlight='true'>
-						<span style='margin-top:30px'> it's not <span class=' right'> extremely</span></span>
-					</p>	
-					
-					<p id='question10'>
-						<input type="range" class='range' min='0' max='7' data-highlight='true'>
-						<span style='margin-top:30px'> annually <span class=' right'> daily</span></span>
-					</p>						
-				</div>		
-				<br>
-				<a class='primary button' onclick='next_question()'>Next</a>				
-				
-				
-				
-				
-			<div style=''>
-
-			</div>
-		</div>		
 								
 			</div>
 	
@@ -398,8 +213,11 @@
 		</div>
 		
 		<div id='main'>
+			<div class='question_banner'>
+				<div class='metric_text cell'>Improve your matches:</div> 
+				<div class='cell'>Are you seeking ongoing financial guidance, or one-time help with a specific life event?</div>
+			</div>	
 			<div class='search_result'>
-
 				<div class='hoverable advisor_entry' >
 						<img src='assets/peter.jpg' class='advisor_pic cell'>
 						<div class='name_block cell'>
