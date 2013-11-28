@@ -37,17 +37,34 @@
 			 	<a class='  primary button' onclick='show_modal()'>Contact</a>
 			</div>	
 			<img src='assets/kathleen.jpg' class='advisor_full'>	
-			<span class='green header1'>Kathleen A. Hentges <img src='assets/approved.png' class='approved'></span> <br>
-						Specializes in <pop>investments</pop>,
+			<span class='green header1 advisor_name'>Kathleen A. Henteges <span><img src='assets/approved.png' class='approved'><span class='tooltip'>This advisor has a clean FINRA record</span></span></span> <br>
+			<span class=''>3150 18th St Ste 219
+San Francisco, CA 94110-2076</span><br>
+
+			Specializes in <pop>investments</pop>,
 			recommended by <pop>parents</pop>
-			<div style='margin:6px 0 10px 0';>
-				<span class="match_percentage">94% match</span>
-				<span class="maven_score">73 &#10029</span>
+			<br>
+
+
+
+			<div>
+				<div class='match badge'>
+				<div class="big_number">94% </div>
+				<div class='small'>match</div>
+				<span class='tooltip'>how this advisor aligns with your needs</span>				
 			</div>
+			<div class='maven badge'>
+				<div class="big_number">73&#10029</div>
+				<div class='small'>maven</div>
+				<span class='tooltip'>Participation</span>
 
-
-			<div class='rating_box'>
-								</div>
+			</div>			
+			<div class='rating badge'>
+				<div class="big_number">3.8/5</div>
+				<div class='small'>rating</div>
+				<span class='tooltip'>Average rating from users</span>
+			</div>	
+			</div>
 		</p>
 		
 	</div>
@@ -107,21 +124,67 @@ Workers in bankruptcy situations face two important issues when it comes to thei
 
 
 	<div class='subsection'>
-			<span class='section_head'>Contact & disclosures</span>
+			<span class='section_head'>disclosures</span>
+		<a class='right' onclick='show_report()'>See full report</a>
 
-		<span class='paired'>
-			<pop>Applied Advisors</pop><br>
-			3150 18th St Ste 219<br>
-			San Francisco, CA 94110-2076<br>
-			(800) 862-2441
-		</span>
-		<span class='paired'>
-			<pop>Credit Suisse Securities LLC</pop> 07/08-07/11 <br>
-			<pop>UBS Financial Services Inc.</pop> 10/01-07/08<br>
-			<pop>J.P. Morgan Securities Inc.</pop> 02/00-10/2001<br>
-			<pop>Hambrecht & Quist LLC</pop> 03/88-02/00<br>
-
-		</span>		
+		<div class='disclosures'>
+			<div class='disclosure_event'>
+				<div class='cell'>
+					<pop>Customer complaint</pop>
+				</div>
+				<div class='cell'>
+					4/3/13
+				</div>
+				<div class='cell'>
+					UBS Financial Services
+				</div>
+				<div class='cell'>
+					Resolved
+				</div>
+			</div>
+			<div class='disclosure_event'>
+				<div class='cell'>
+					<pop>Customer complaint</pop>
+				</div>
+				<div class='cell'>
+					12/30/11
+				</div>
+				<div class='cell'>
+					UBS Financial Services
+				</div>
+				<div class='cell'>
+					Resolved
+				</div>
+			</div>
+			<div class='disclosure_event'>
+				<div class='cell'>
+					<pop>Customer complaint</pop>
+				</div>
+				<div class='cell'>
+					2/13/11
+				</div>
+				<div class='cell'>
+					UBS Financial Services
+				</div>
+				<div class='cell'>
+					Resolved
+				</div>
+			</div>
+			<div class='disclosure_event'>
+				<div class='cell'>
+					<pop>Customer complaint</pop>
+				</div>
+				<div class='cell'>
+					7/20/01
+				</div>
+				<div class='cell'>
+					UBS Financial Services
+				</div>
+				<div class='cell'>
+					Resolved
+				</div>
+			</div>									
+		</div>	
 	</div>
 </div>	
 		<script src='jquery-1.9.1.min.js'></script>

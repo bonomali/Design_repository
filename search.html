@@ -29,10 +29,6 @@
 		<span class='header1'>Advisor search</span>
 		<br><br>
 			<div class='secondary_body'>
-			<form name="input" action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search by name' style='width:67%' class='text_input seamless'>
-				<a class='inline right primary button' style=''>Search</a>
-			</form>
 			<div class='secondary_subsection'>
 			<a onclick='multi_message()' class='metric_text'>Message multiple advisors</a>
 			</div>
@@ -76,7 +72,10 @@
 
 				
 			</div>
-
+			<form name="input" action="html_form_action.asp" method="get">
+				<input type="text" name="user" placeholder='Search by name' style='width:67%' class='text_input seamless'>
+				<a class='inline right primary button' style=''>Search</a>
+			</form>
 								
 			</div>
 	
@@ -87,7 +86,7 @@
 		
 		<div id='main'>
 			<div class='question_banner' onclick='show_modal()'>
-				<div class='metric_text cell'>Improve your matches:</div> 
+				<div class='cell' style='padding-right:8px'><b>Get better matches:</b></div> 
 				<div class='cell'>Are you seeking ongoing financial guidance, or one-time help with a specific life event?</div>
 			</div>	
 			<div class='search_result'>

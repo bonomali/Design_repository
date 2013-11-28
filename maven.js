@@ -7,7 +7,12 @@ $(function(){
 function toggle_menu() {
 	$(".menu").toggleClass('open');
 }
-      
+
+// Load modals
+function load_modal(target){
+	$('.modal').load('modal.html');
+	$('.subsection').load(target);
+}      
 // general modal show/hide	
 function show_modal() {
 	$('.modal').fadeIn();

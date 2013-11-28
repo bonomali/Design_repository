@@ -9,6 +9,8 @@
 		<div id='fader'></div>
 		<div class='modal_window' id='profile'>
 			<div class='subsection'>
+			
+			
 				<span class='section_head'>Ask a question</span>
 				Question summary (80 characters max):
 				<input type='text' class='full text_input' maxlength="80" placeholder='(e.g. "Can I use my 401(k) to invest in real estate?")'>
@@ -22,10 +24,10 @@
 				<div class="half">
 					<a class="secondary paired button" onclick='hide_modal()'>Cancel</a>
 					<a class="primary paired button" onclick='hide_modal()'>Submit</a>
-				</div>										     
-					
-
-			</div>		
+				</div>			
+				
+											     
+			</div>	
 		</div>
 	</div>
 		<div id='header'>
@@ -37,12 +39,9 @@
 		<span class='header1'>Question forum</span>
 		<br><br>
 			<a class='primary button' onclick='show_modal()'>Ask a Question</a>
-			
+			<br>
 						<div class='secondary_body'>
-			<form name="input" action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search questions' style='width:67%' class='text_input seamless'>
-				<a class='inline right primary button' style=''>Search</a>
-			</form>
+
 
 			<div class='secondary_subsection'>
 			
@@ -52,14 +51,14 @@
 					<div class="ck-button half" >
 					   <label>
 					      <input type="checkbox" value="1" checked>
-					      <span>Match %</span>
+					      <span>Date posted</span>
 					   </label>
 					</div>
 
 					<div class="ck-button half" >
 					   <label>
 					      <input type="checkbox" value="1" checked>
-					      <span>Maven score</span>
+					      <span># replies</span>
 					   </label>
 					</div>
 		
@@ -84,7 +83,10 @@
 				
 			</div>
 
-								
+						<form name="input" action="html_form_action.asp" method="get">
+				<input type="text" name="user" placeholder='Search questions' style='width:67%' class='text_input seamless'>
+				<a class='inline right primary button' style=''>Search</a>
+			</form>					
 			</div>
 			
 
