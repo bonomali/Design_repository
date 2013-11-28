@@ -99,18 +99,24 @@ body{
 	margin-right: 20px;
 	text-align: middle;
 	display:inline-block;
+	
 }
 .table {
-	display:table-row;
+	display:table;
+	width:100%;
 }
 
 .advisor_full {
 	float:left;
 	margin-right:30px;
 	border:1px solid #eee;
+	width:12%;
 }
 /*Typography*/
-
+b {
+	font-family:Proxima-Nova-bold;
+	
+}
 pop {
 	font-family:Proxima-Nova-bold;
 	color:#009245;
@@ -201,17 +207,21 @@ font-size: 0.9em;
 .match_percentage {
 	background-color: #999;
 	color: white;
-	padding: 3px 6px 3px 6px;
-	margin:1000px 5px 5px 0px;
+	padding: 1px 5px 0px 5px;
+	margin: 3px 5px 5px 0px;
 	border-radius:3px;
+	display: inline-block;
+	line-height: 1.5em; 
 }
 
 .maven_score {
 	background-color:#5bb75b;
 	color: white;
-	padding: 3px 6px 3px 6px;
-	margin:-3px 5px 5px 0px;
+	padding: 1px 5px 0px 5px;
+	margin: -1px 5px 5px 0px;
 	border-radius:3px;
+	display: inline-block;
+	line-height: 1.5em; 
 }
 
 
@@ -442,7 +452,7 @@ margin-left:5px;
 }
 
 .name_block {
-	width:28%;
+	width:40%;
 	min-width: 180px;
 	vertical-align: middle;
 	display:table-cell;
@@ -450,11 +460,11 @@ margin-left:5px;
 }
 
 .niche {
-	width:32%;
+	width:30%;
 }
 
 .cell {
-	display: inline-block;
+	display: table-cell;
 	vertical-align: middle;
 }
 #top_results {
@@ -476,11 +486,7 @@ margin-left:5px;
 		padding:15px;
 		border-top: 1px solid #eee;
 }
-.secondary_body form {
-		padding:0px 10px 0px 10px;
-		border-top: 1px solid #eee;
 
-}
 .rating_box {
 		background-color:white;
 		border: 1px solid #ddd;
@@ -513,6 +519,7 @@ margin-left:5px;
 	text-align:center;
 	cursor:default;
 	display:block;
+	line-height:1em;
 	}
 
 .button:hover {
@@ -526,7 +533,7 @@ margin-left:5px;
 }
 
 .primary {
-	border:1px solid #009245;
+	outline:1px solid #009245;
 	background-color:#5bb75b;
 	color:white;
 
@@ -746,7 +753,9 @@ input[type=password]
 	text-align: center;
 }	
 
-
+#top_banner span {
+	cursor:hand;
+}
 /* Account Settings page */
 
 .password_change:active {
@@ -859,11 +868,9 @@ input[type=password]
 	height:inherit;
 }
 
- 
-.avatar{
-	display:none;
+.standard {
+	width:inherit;
 }
-
 .comment_text {
 	margin:0px;
 }
@@ -918,6 +925,11 @@ input[type=password]
 
 @media only screen and (max-width: 620px) {
 
+.advisor_full, 
+.avatar{
+	display:none;
+}
+
 .advisor_pic {
 	display:none;
 }
@@ -928,7 +940,15 @@ input[type=password]
 .niche {
 	  	display:none;
 }
- 
+
+.standard {
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	left:0px;
+	margin: 0px;
+	background:white;
+} 
 }
 
 

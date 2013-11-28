@@ -38,11 +38,17 @@
 		<br><br>
 			<a class='primary button' onclick='show_modal()'>Ask a Question</a>
 			
-			<div class='search'>
+						<div class='secondary_body'>
+			<form name="input" action="html_form_action.asp" method="get">
+				<input type="text" name="user" placeholder='Search questions' style='width:67%' class='text_input seamless'>
+				<a class='inline right primary button' style=''>Search</a>
+			</form>
+
+			<div class='secondary_subsection'>
 			
-				<div class='search_header'>Sort Results</div>
+				<div class='metric_text '><b>Sort Results</b></div>
 				
-				<div class='comment_body metric_text'>
+				<div class='metric_text'>
 					<div class="ck-button half" >
 					   <label>
 					      <input type="checkbox" value="1" checked>
@@ -69,7 +75,6 @@
 					      <input type="checkbox" value="1"><span>Last activity</span>
 					   </label>
 					</span>
-					
 
 
 
@@ -78,15 +83,17 @@
 
 				
 			</div>
+
+								
+			</div>
 			
-			<br>
-			<form name="input" action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search questions' style='width:60%' class='search_field'>
-				<a class='primary button inline' type="submit" value="Submit" style='width:30%'>Search</a>
+
 			</form>
 	
 		</div>	
 		<div id='main'>
+							<div id='specialty'></div>
+
 			<div class='search_result'>
 				<div class='question_entry hoverable' onclick="location.href='question.html';">
 					<div class='half cell'>

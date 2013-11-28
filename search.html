@@ -9,14 +9,11 @@
 		<div id='fader'></div>
 		<div class='modal_window' id='profile'>
 			<div class='subsection'>
-				<span class='section_head'>Compose message</span>
-				To:<pop id='advisor_name'></pop>
-				<p>
-				<textarea rows='6' class='full text_input' placeholder='Write your message here'></textarea>
-				</p>
+				<span class='section_head'>Improve your matches</span>
+				<p>(Questions will display here, one at a time)</p>
 				<div class='half'>
-					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
-					<a class='primary paired button'>Send</a>					
+					<a class='secondary paired button' onclick='hide_modal()'>Close</a>
+					<a class='primary paired button'>Next</a>					
 				</div>	
 			</div>		
 		</div>
@@ -33,15 +30,15 @@
 		<br><br>
 			<div class='secondary_body'>
 			<form name="input" action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search by name' style='width:70%' class='text_input seamless'>
-				<a class='inline right' style=''>Search</a>
+				<input type="text" name="user" placeholder='Search by name' style='width:67%' class='text_input seamless'>
+				<a class='inline right primary button' style=''>Search</a>
 			</form>
 			<div class='secondary_subsection'>
-			<div onclick='multi_message()' class='metric_text' id='sdfsdf'>message multiple advisors</div>
+			<a onclick='multi_message()' class='metric_text'>Message multiple advisors</a>
 			</div>
 			<div class='secondary_subsection'>
 			
-				<div class='metric_text'>Sort Results</div>
+				<div class='metric_text '><b>Sort Results</b></div>
 				
 				<div class='metric_text'>
 					<div class="ck-button half" >
@@ -84,159 +81,37 @@
 			</div>
 	
 
-			
-			
-			<br>
 
-			<div class='search' style='display:none'>
-			
-				<div class='search_header'>Filter Results</div>
-				<div class='comment_body border_bottom'>
-					<div class='filter_title'>Commission structure</div>
-					
-					<span class="ck-button " >
-					   <label>
-					      <input type="checkbox" value="1"checked><span>Fee only</span>
-					   </label>
-					</span>	
-					<br>					
-					<span class="ck-button " >
-					   <label>
-					      <input type="checkbox" value="1"checked><span>Commission only</span>
-					   </label>
-					</span>	
-
-					<span class="ck-button " >
-					   <label>
-					      <input type="checkbox" value="1"checked><span>Fee plus commission</span>
-					   </label>
-					</span>	
-					
-				</div>				
-				<div class='comment_body border_bottom'>
-					<div class='filter_title'>Minimum asset requirement</div>
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" checked><span>None</span>
-					   </label>
-					</span>
-										
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" checked><span>$50,000+</span>
-					   </label>
-					</span>	
-
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1"  checked><span>$100,000+</span>
-					   </label>
-					</span>		
-									
-					<span class="ck-button half" >
-					   <label> 
-					      <input type="checkbox" value="1"  checked><span>$250,000+</span>
-					   </label>
-					</span>		
-					
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" checked ><span>$500,000+</span>
-					   </label>
-					</span>		
-									
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1"  checked><span>$1,000,000+</span>
-					   </label>
-					</span>	
-				</div>	
-				
-
-				<div class='comment_body '>
-					<div class='filter_title'>Language preference</div>
-					<span class="ck-button half" >
-					   <label>
-					      <input type="radio" value="1" checked><span>None</span>
-					   </label>
-					</span>
-										
-					<span class="ck-button half" >
-					   <label>
-					      <input type="radio" value="1"><span>Spanish</span>
-					   </label>
-					</span>	
-										
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" ><span>Mandarin</span>
-					   </label>
-					</span>	
-										
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" ><span>Cantonese</span>
-					   </label>
-					</span>		
-								
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" ><span>Tagalog</span>
-					   </label>
-					</span>		
-									
-					<span class="ck-button half" >
-					   <label> 
-					      <input type="checkbox" value="1" ><span>Russian</span>
-					   </label>
-					</span>		
-					
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" ><span>Hindi</span>
-					   </label>
-					</span>		
-									
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" ><span>Vietnamese</span>
-					   </label>
-					</span>						
-					
-					
-			
-
-				</div>
-				
-			</div>
 	
 		</div>
 		
 		<div id='main'>
-			<div class='question_banner'>
+			<div class='question_banner' onclick='show_modal()'>
 				<div class='metric_text cell'>Improve your matches:</div> 
 				<div class='cell'>Are you seeking ongoing financial guidance, or one-time help with a specific life event?</div>
 			</div>	
 			<div class='search_result'>
 				<div class='hoverable advisor_entry' >
-						<img src='assets/peter.jpg' class='advisor_pic cell'>
-						<div class='name_block cell'>
-							<span class='header2'>Peter Karp</span> 
-							<br>
-							<span class='footnote place'>San Francisco, CA <br></span>
-							<span class='footnote'>Specializes in <pop>investments</pop></span>
-	
-						</div>
-						<div class='niche cell footnote'>
-							Recommended by	<pop>business owners, retirees</pop>
-						</div>
-						<span  class='numbers cell'>
-							<span class='match_percentage'>?? match</span>						
-							<span class='maven_score'>99 &#10029</span>	
-						</span>
-				</div>
+						<div class='table'>
+							<img src='assets/peter.jpg' class='advisor_pic cell'>
+							<div class='name_block cell'>
+								<span class='header2'>Peter Karp</span> 
+								<br>
+								<span class='footnote place'>San Francisco, CA <br></span>
+								<span class='footnote'>Specializes in <pop>investments</pop></span>
+		
+							</div>
+							<div class='niche cell footnote'>
+								Rated highly by <br>	<pop>business owners, retirees</pop>
+							</div>
+							<span  class='numbers cell'>
+								<span class='match_percentage'>?? match</span>						
+								<span class='maven_score'>99 &#10029</span>	
+							</span>
+						</div>				
+					</div>
 				<div class='hoverable advisor_entry'>
-				<img src='assets/david.jpg' class='advisor_pic cell'>
+				<div class='table'><img src='assets/david.jpg' class='advisor_pic cell'>
 	
 						<span class='name_block cell'>
 							<span class='header2'>David Dean</span> 
@@ -245,16 +120,16 @@
 							<span class='footnote'>Specializes in <pop>retirement</pop></span>
 	
 						</span>
-						<div class='niche cell footnote'>Recommended by	<pop>baby boomers</pop>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>baby boomers</pop>
 						</div>
 						<span  class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						
 							<span class='maven_score'>41 &#10029</span>	
 						</span>
-				</div>
+</div>				</div>
 
 				<div class='hoverable advisor_entry'>
-				<img src='assets/kathleen.jpg' class='advisor_pic cell'>
+				<div class='table'><img src='assets/kathleen.jpg' class='advisor_pic cell'>
 	
 						<span class='name_block cell'>
 							<span class='header2'>Kathleen Hentges</span> 
@@ -263,16 +138,16 @@
 							<span class='footnote'>Specializes in <pop>investments</pop></span>
 	
 						</span>
-						<div class='niche cell footnote'>Recommended by	<pop>parents</pop>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>parents</pop>
 						</div>
 						<span  class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						
 							<span class='maven_score'>73 &#10029</span>	
 						</span>
-				</div>
+</div>				</div>
 
 				<div class='hoverable advisor_entry'>
-				<img src='assets/sabrina.jpg' class='advisor_pic cell'>
+				<div class='table'><img src='assets/sabrina.jpg' class='advisor_pic cell'>
 	
 						<span class='name_block cell'>
 							<span class='header2'>Sabrina F. Lowell</span> 
@@ -281,16 +156,16 @@
 							<span class='footnote'>Specializes in <pop>charity</pop></span>
 	
 						</span>
-						<div class='niche cell footnote'>Recommended by	<pop>women</pop>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>women</pop>
 						</div>
 						<span class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						
 							<span class='maven_score'>12 &#10029</span>	
 						</span>
-				</div>
+</div>				</div>
 
 				<div class='hoverable advisor_entry'>
-				<img src='assets/seton.jpg' class='advisor_pic cell'>
+				<div class='table'><img src='assets/seton.jpg' class='advisor_pic cell'>
 	
 						<span class='name_block cell'>
 							<span class='header2'>Seton McAndrews</span> 
@@ -299,13 +174,13 @@
 							<span class='footnote'>Specializes in <pop>retirement</pop></span>
 	
 						</span>
-						<div class='niche cell footnote'>Recommended by	<pop>inheritors, baby boomers</pop>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>inheritors, baby boomers</pop>
 						</div>
 						<span  class='numbers cell'>
 							<span class='match_percentage'>?? match</span>						
 							<span class='maven_score'>27 &#10029</span>	
 						</span>
-				</div>
+</div>				</div>
 			</div>	
 	
 	</div>
