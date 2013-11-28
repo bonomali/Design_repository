@@ -47,13 +47,12 @@ body{
 }
 
 .modal {
-	padding:100px 15px 0px 15px;
 	position:fixed;
 	top:0;
 	z-index: 3000;
 	background: rgba(230,230,230,.8);
 	width:100%;
-	height:100%;
+	height:10000%;
 	display:none;
 	-webkit-transition: all 1s;
 	transition: all 1s;	
@@ -64,6 +63,7 @@ body{
 	border:1px solid #ccc;
 	max-width: 600px;
 	margin:0 auto;
+	
 	}
 	
 #header{
@@ -666,12 +666,23 @@ input[type=password]
 .disclosures {
 	display:table
 }
-.disclosure_event {
+.disclosure_event, .row {
 	display:table-row;
+}
+.row .cell {
+	padding-bottom: 20px;
+}
+.row .cell:first-child {
+	padding-right: 50px;
 }
 .disclosure_event .cell {
 	padding-right: 25px;
 }
+
+#report {
+	display:none;
+}
+
 /* Menu */
 
 #header img {
@@ -966,14 +977,14 @@ input[type=password]
 	display:none;
 }
 
-.advisor_name {
-	font-size:1.5em;
-}
+
 }
 
 @media only screen and (max-width: 620px) {
 
-
+.advisor_name {
+	font-size:1.5em;
+}
 
 .advisor_pic {
 	display:none;

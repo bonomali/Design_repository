@@ -13,9 +13,10 @@ function load_modal(target){
 	$('.modal').load('modal.html');
 	$('.subsection').load(target);
 }      
+
 // general modal show/hide	
-function show_modal() {
-	$('.modal').fadeIn();
+function show_modal(target) {
+	$(target).fadeIn();
 }
 
 function hide_modal(){
@@ -47,7 +48,7 @@ function add_recipient(target) {									//
 }
 
 function multi_message_confirm() {
-	show_modal();
+	show_modal('.compose');
 	for (var i=0; i<recipients.length; i++) {		//populates the 'To' field with the names of all advisors receiving this message
 		$('#advisor_name').append(recipients[i])
 		

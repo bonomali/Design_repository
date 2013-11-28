@@ -7,7 +7,7 @@
 
 <body>
 
-	<div class='modal'>
+	<div class='compose modal'>
 		<div id='fader'></div>
 		<div class='modal_window' id='profile'>
 			<div class='subsection'>
@@ -23,6 +23,13 @@
 			</div>		
 		</div>
 	</div>
+
+	<div class='report modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+		
+		</div>
+	</div>
 	<div id='top_banner'>Message sent</div>
 	<div id='header'>
 	</div>
@@ -34,7 +41,7 @@
 		<p>
 			<div class='right standard'>
 		 	 	<a class=' secondary button'>Rate advisor</a>
-			 	<a class='  primary button' onclick='show_modal()'>Contact</a>
+			 	<a class='  primary button' onclick='show_modal(".compose")'>Contact</a>
 			</div>	
 			<img src='assets/kathleen.jpg' class='advisor_full'>	
 			<span class='green header1 advisor_name'>Kathleen A. Henteges <span><img src='assets/approved.png' class='approved'><span class='tooltip'>This advisor has a clean FINRA record</span></span></span> <br>
@@ -125,7 +132,8 @@ Workers in bankruptcy situations face two important issues when it comes to thei
 
 	<div class='subsection'>
 			<span class='section_head'>disclosures</span>
-		<a class='right' onclick='show_report()'>See full report</a>
+		<a class='right' onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);
+'>See full report</a>
 
 		<div class='disclosures'>
 			<div class='disclosure_event'>
@@ -186,6 +194,32 @@ Workers in bankruptcy situations face two important issues when it comes to thei
 			</div>									
 		</div>	
 	</div>
+	<div class='subsection' id='report'>
+				<span class='section_head'>Full report</span>
+				<div>
+				<div class='row'>
+					<div class='header3 cell'>Allegations</div> 
+					<p class='cell'>TIME FRAME?NOVEMBER 2007 - SEPTEMBER 2008 CLAIMANT ALLEGES THAT HER INVESTMENTS IN PRINCIPAL-PROTECTED STRUCTURED PRODUCTS WERE MISREPRESENTED AS SAFE AND INFALLIBLE. CLAIMANT FURTHER ALLEGES THAT THE STRUCTURED PRODUCTS WERE UNSUITABLE IN LIGHT OF HER CONSERVATIVE INVESTMENT OBJECTIVES.</p>
+				</div>
+				<div class='row'>				
+					<div class='header3 cell'>Product type</div> 
+					<p class='cell'>Other: STRUCTURED PRODUCTS</p>
+				</div>
+				<div class='row'>	
+					<div class='header3 cell'>Alleged Damages</div>
+					<p class='cell'> $300,000</p>
+				</div>
+				<div class='row'>					 
+					<div class='header3 cell'>Settlement Amount</div> 
+					<p class='cell'>$95,000</p>
+				</div>
+				<div class='row'>					
+					<div class='header3 cell'>Summary</div> 
+					<p class='cell'>Claimants have not asserted any claims against me, are not seeking any award against me, and have not named or joined me as a respondent in this action. All claims are asserted against UBS Financial Services and not against me. This in their claim, claimants specifically state that "claimants firmly believe that their broker did not intentionally mislead them, but rather was an innocent conduit for the firm's recommendations." The matter has now been resolved between UBS and claimants. Consistent with the lack of any claims against me, I have neither been asked, nor directed, to contribute any amount towards the resolution.</p>
+				</div>	
+				</div>
+				</div>	
+			</div>			
 </div>	
 		<script src='jquery-1.9.1.min.js'></script>
 		<script src='maven.js'></script>

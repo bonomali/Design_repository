@@ -5,7 +5,7 @@
 	<script src='jquery-1.9.1.min.js'></script>
 </head>
 <body>
-	<div class='modal'>
+	<div class='questionnaire modal'>
 		<div id='fader'></div>
 		<div class='modal_window' id='profile'>
 			<div class='subsection'>
@@ -18,6 +18,24 @@
 			</div>		
 		</div>
 	</div>
+	<div class='compose modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Compose message</span>
+				To:<pop id='advisor_name'> (list of recipients here) </pop>
+				<p>
+				<textarea rows='6' class='full text_input' placeholder='Write your message here'></textarea>
+				</p>
+				<div class='half'>
+					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
+					<a class='primary paired button' onclick='send_message()'>Send</a>					
+				</div>	
+			</div>		
+		</div>
+	</div>
+	
+	
 	<div id='top_banner'>
 			<span onclick='multi_message_confirm()'>Select recipients, then tap here to compose message</span>
 			<a class='right' onclick='multi_message_cancel()'>cancel</a> 
@@ -28,7 +46,9 @@
 		<div id="sidebar">
 		<span class='header1'>Advisor search</span>
 		<br><br>
-			<div class='secondary_body'>
+		
+		
+		<div class='secondary_body'>
 			<div class='secondary_subsection'>
 			<a onclick='multi_message()' class='metric_text'>Message multiple advisors</a>
 			</div>
@@ -85,7 +105,7 @@
 		</div>
 		
 		<div id='main'>
-			<div class='question_banner' onclick='show_modal()'>
+			<div class='question_banner' onclick='show_modal(".questionnaire")'>
 				<div class='cell' style='padding-right:8px'><b>Get better matches:</b></div> 
 				<div class='cell'>Are you seeking ongoing financial guidance, or one-time help with a specific life event?</div>
 			</div>	
