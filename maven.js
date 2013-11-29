@@ -145,7 +145,7 @@ for (var i=0; i<niches.length; i++)
 	} 
 	
 var specialties= ['Investments', 'Financial Planning', 'Retirement Plans', 'Budget/Debt Management', '401(K)/403(B)/IRAS', 'Taxes And Accounting', 'Real Estate', 'Insurance', 'Estate Planning', 'Choosing An Advisor']
-for (var i=0; i<specialties.length; i++) console.log('specialty')
+for (var i=0; i<specialties.length; i++) 
 	{	$('#specialty').append('<span class="ck-button choices"><label><input type="checkbox" value="1"><span>'+specialties[i]+'</span></label></span>');
 	} 
 // Search page questionnaire

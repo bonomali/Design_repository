@@ -20,6 +20,11 @@
     src: url(assets/ProximaNova-light.ttf);
     font-weight:400;
 }
+
+@font-face {
+    font-family: Proxima-Nova-semibold;
+    src: url(assets/ProximaNova-semibold.ttf);
+}
 @font-face {
     font-family: Proxima-Nova-bold;
     src: url(assets/ProximaNova-bold.ttf);
@@ -129,13 +134,13 @@ pop {
 	}
 
 .header2 {
-	font-family: Proxima-Nova-bold;
+	font-family: Proxima-Nova-semibold;
 	color:#009245;
 
 }
 
 .header3 {
-	font-family: Proxima-Nova-bold;
+	font-family: Proxima-Nova-semibold;
 }
 
 .section_head {
@@ -148,7 +153,13 @@ pop {
 	
 }
 
-
+.subsection_head {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	font-family: Proxima-Nova-semibold;
+	font-size: 0.8em;
+	color:#999;
+}
 .question {
 	width:60%;
 	display:inline-table;
@@ -581,7 +592,7 @@ margin-left:5px;
 
 .ck-button label span {
     text-align:left;
-    padding: 4px 0px;
+    padding: 2px 0px;
     display:inline-block;
 }
 
@@ -655,7 +666,7 @@ input[type=password]
 }
 .big_number {
 	font-size: 1.5em;
-	font-family: Proxima-Nova-bold;
+	font-family: Proxima-Nova-semibold;
 }
 
 .small {
@@ -982,7 +993,7 @@ input[type=password]
 
 @media only screen and (max-width: 620px) {
 
-.advisor_name {
+.header1 {
 	font-size:1.5em;
 }
 
@@ -1010,6 +1021,11 @@ input[type=password]
 width:16px;
 margin-left:0px;
 }
+
+#top_banner {
+	text-align: left;	
+}
+
 }
 
 
