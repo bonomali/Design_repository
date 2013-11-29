@@ -16,11 +16,11 @@ function load_modal(target){
 
 // general modal show/hide	
 function show_modal(target) {
-	$(target).fadeIn();
+	$(target).attr('style','display:block; opacity:1');
 }
 
 function hide_modal(){
-	$('.modal').attr('style','display:none');
+	$('.modal').attr('style','display:none; opacity:0');
 }		    
 
 function send_message() {
@@ -30,12 +30,16 @@ function send_message() {
 
 
 //Search page
+
+//set links to advisor page
 $('.advisor_entry').attr('onclick', "location.href='advisor.html'");
 
+$('.maven_score').prepend('<span class="tooltip">Maven Score measures how much an advisor participates in discussion</span>');
+$('.match_percentage').prepend('<span class="tooltip">Match percentage measures how closely this advisor aligns with your goals</span>');
+
+/*
 function multi_message(target) {												//sets each advisor entry to add the advisor's name to the recipients list per 'onclick'
 	$('#top_banner').show(200);
-	//alert('To write multiple recipients simultaneously, select them and press OK to begin composing');
-	//alert($(target).attr('id'))
 	$('.advisor_entry').attr('onclick', "add_recipient(this)");	
 }
 
@@ -64,6 +68,10 @@ function multi_message_cancel() {
 	$('.advisor_entry').attr('onclick', "location.href='advisor.html'");
 
 }
+
+*/
+
+
 //Question page
 
 //Upvote functionality

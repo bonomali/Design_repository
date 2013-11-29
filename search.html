@@ -45,70 +45,64 @@
 	<div class='container'>
 		<div id="sidebar">
 		<span class='header1'>Advisor search</span>
-		<br><br>
-		
 		
 		<div class='secondary_body'>
-			<div class='secondary_subsection'>
-			<a onclick='multi_message()' class='metric_text'>Message multiple advisors</a>
-			</div>
-			<div class='secondary_subsection'>
-			
-				<div class='metric_text '><b>Sort Results</b></div>
-				
-				<div class='metric_text'>
-					<div class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" checked>
-					      <span>Match %</span>
-					   </label>
-					</div>
-
-					<div class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" checked>
-					      <span>Maven score</span>
-					   </label>
-					</div>
-		
-					
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1"><span>Distance</span>
-					   </label>
-					</span>
-
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1"><span>Last activity</span>
-					   </label>
-					</span>
-					
-
-
-
-				</div>
-
-
-				
-			</div>
 			<form name="input" action="html_form_action.asp" method="get">
 				<input type="text" name="user" placeholder='Search by name' style='width:67%' class='text_input seamless'>
 				<a class='inline right primary button' style=''>Search</a>
 			</form>
-								
-			</div>
-	
-
-
-	
+			
 		</div>
 		
+		<div class='secondary_body'>
+			<div class='secondary_subsection'>
+				<div class='metric_text '><b>Questionnaire</b></div>
+				Are you seeking ongoing financial guidance, or one-time help with a specific life event?
+				<p class='metric_text'>
+					<input type='radio'><span>ongoing</span>
+					<input type='radio'><span>one-time</span>
+				</p>	
+				
+				<a class='button primary' onclick='show_modal(".questionnaire")'>Get better matches</a>
+			</div>
+		</div>		
+				<div class='secondary_subsection'>
+					<div class='metric_text '><b>Sort Results</b></div>
+					
+					<div class='metric_text'>
+					(this will be a dropdown, probably)
+						<div class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1" checked>
+						      <span>Match %</span>
+						   </label>
+						</div>
+	
+						<div class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1" checked>
+						      <span>Maven score</span>
+						   </label>
+						</div>
+			
+						
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>Distance</span>
+						   </label>
+						</span>
+	
+						<span class="ck-button half" >
+						   <label>
+						      <input type="checkbox" value="1"><span>Last activity</span>
+						   </label>
+						</span>
+					</div>
+				</div>
+
+			</div>
+		
 		<div id='main'>
-			<div class='question_banner' onclick='show_modal(".questionnaire")'>
-				<div class='cell' style='padding-right:8px'><b>Get better matches:</b></div> 
-				<div class='cell'>Are you seeking ongoing financial guidance, or one-time help with a specific life event?</div>
-			</div>	
 			<div class='search_result'>
 				<div class='hoverable advisor_entry' >
 						<div class='table'>
