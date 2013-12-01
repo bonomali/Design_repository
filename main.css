@@ -589,7 +589,6 @@ margin-left:5px;
 }
 .ck-button {
     text-align:left;
-    display:inline-block;
     color:#999;
 }
 
@@ -823,6 +822,18 @@ input[type=password]
 
 #top_banner span {
 	cursor:hand;
+}
+
+#dropdown {
+	max-height: 0px;
+	overflow: hidden;
+    -webkit-transition:max-height 1s;
+    transition:max-height 1s;
+}
+
+div:hover > #dropdown,
+div:visited > #dropdown {
+	max-height: 999px;
 }
 /* Account Settings page */
 
