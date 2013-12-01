@@ -31,7 +31,7 @@
     font-weight:bold;
 }
 
-a {
+a, div {
 	cursor:hand;
 }
 
@@ -42,6 +42,7 @@ body{
 	color:#666;
 	margin: 0px;
 	padding-bottom:50px;
+	cursor: default;
 }
 
 .container {
@@ -49,6 +50,8 @@ body{
 	min-width:280px;
 	padding: 0px 15px;
 	margin:0 auto;
+	cursor: default;
+
 }
 
 .modal {
@@ -181,12 +184,11 @@ form label {
 	margin-left: -225px;
 	margin-bottom: -100px;
 	background:white;
-	border:1px solid #009245;
+	border:1px solid #ccc;
 	border-radius: 3px;
 	color:#009245;
 	font-size: 12px;
 	font-family: Proxima-nova;
-	text-transform: uppercase;
 	padding:5px;
 	display:none;
 	line-height: 1em;
@@ -497,9 +499,18 @@ margin-left:5px;
 		border: 1px solid #ddd;
 		margin-top:15px;
 }
+
 .secondary_subsection {
 		padding:15px;
 		border-bottom: 1px solid #eee;
+}
+
+.secondary_header {
+	font-family: Proxima-Nova-semibold, sans-serif;
+	font-size: 0.8em;
+	text-transform: uppercase;
+	color: #999;
+	margin-bottom: 5px;		
 }
 
 .rating_box {
@@ -532,7 +543,6 @@ margin-left:5px;
 	font-family: Proxima-Nova, sans-serif;
 	outline:none;
 	text-align:center;
-	cursor:default;
 	display:block;
 	line-height:1em;
 	}
@@ -599,6 +609,8 @@ margin-left:5px;
     text-align:left;
     padding: 2px 0px;
     display:inline-block;
+	cursor:hand;
+    
 }
 
 .ck-button label input {
@@ -707,7 +719,7 @@ input[type=password]
 
 .menu {
 	padding-top:30px;
-	max-height: 0px;	
+	max-height: 0%;	
 	float:right;
 }	
 .menu_item {
@@ -824,16 +836,16 @@ input[type=password]
 	cursor:hand;
 }
 
-#dropdown {
-	max-height: 0px;
+#dropdown_options {
+	max-height: 0%;
 	overflow: hidden;
-    -webkit-transition:max-height 1s;
-    transition:max-height 1s;
+    -webkit-transition:max-height 1.5s;
+    transition:max-height 1.5s;
 }
 
-div:hover > #dropdown,
-div:visited > #dropdown {
-	max-height: 999px;
+div:hover > #dropdown_options,
+div:active > #dropdown_options {
+	max-height: 100%;
 }
 /* Account Settings page */
 
@@ -993,7 +1005,7 @@ div:visited > #dropdown {
         }
 
 .open {
-	max-height: 500px;
+	max-height: 100%;
 }
 
 .subsection {

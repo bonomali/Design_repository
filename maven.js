@@ -28,7 +28,13 @@ function send_message() {
 	$('#top_banner').show(200).delay(2000).hide(200);
 }
 
-
+window.addEventListener("load",function() {
+    // Set a timeout...
+    setTimeout(function(){
+        // Hide the address bar!
+        window.scrollTo(0, 1);
+    }, 0);
+});
 //Search page
 
 //set links to advisor page

@@ -56,7 +56,7 @@
 		
 		<div class='secondary_body'>
 			<div class='secondary_subsection'>
-				<div class='metric_text '><b>Questionnaire</b></div>
+				<div class='secondary_header '>Questionnaire</div>
 				Are you seeking ongoing financial guidance, or one-time help with a specific life event?
 				<p class='metric_text'>
 					<input type='radio'><span>ongoing</span>
@@ -66,11 +66,11 @@
 				<a class='button primary' onclick='show_modal(".questionnaire")'>Get better matches</a>
 			</div>
 		</div>		
-				<div class='secondary_subsection'>
-					<div class='metric_text'><b>Sort Results <span class='right'>&#9660;</span></b></div>
+				<div class='secondary_subsection' onclick='$("#dropdown_options").toggleclass("open")'>
+					<div class='secondary_header'>Sort Results <span class='right footnote'>&#9660;</span></div>
 					
-					<div class='metric_text' id='dropdown'>
-						<div class="ck-button " >
+					<div class='metric_text' id='dropdown_options'>
+						<div class="ck-button">
 						   <label>
 						      <input type="checkbox" value="1" checked>
 						      <span>Show best matches</span>
@@ -80,7 +80,7 @@
 						<div class="ck-button" >
 						   <label>
 						      <input type="checkbox" value="1" checked>
-						      <span>show advisor with high maven scores</span>
+						      <span>show the highest maven scores</span>
 						   </label>
 						</div>
 			
