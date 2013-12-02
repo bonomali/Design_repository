@@ -805,8 +805,8 @@ input[type=password]
 
 #dropdown {
 	border-bottom:1px solid #ddd;
-	padding: 5px 15px;	
-	margin-top: 10px;
+	padding: 0px 15px 10px 15px;	
+	margin-top: 15px;
 }
 #dropdown_options {
 	max-height: 0%;

@@ -37,61 +37,45 @@
 		
 		<div id="sidebar">
 		<span class='header1'>Question forum</span>
-		<br><br>
-			<a class='primary button' onclick='show_modal(".ask")'>Ask a Question</a>
-			<br>
-						<div class='secondary_body'>
-
-
-			<div class='secondary_subsection'>
-			
-				<div class='subsection_head'>Sort Results</div>
-				
-				<div class='metric_text'>
-					<div class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" checked>
-					      <span>Date posted</span>
-					   </label>
-					</div>
-
-					<div class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1" checked>
-					      <span># replies</span>
-					   </label>
-					</div>
 		
-					
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1"><span>Views</span>
-					   </label>
-					</span>
-
-					<span class="ck-button half" >
-					   <label>
-					      <input type="checkbox" value="1"><span>Last activity</span>
-					   </label>
-					</span>
-
-
-
-				</div>
-
-
-				
-			</div>
-
-						<form name="input" action="html_form_action.asp" method="get">
+		<div class='secondary_body'>
+			<form name="input" action="html_form_action.asp" method="get">
 				<input type="text" name="user" placeholder='Search questions' style='width:67%' class='text_input seamless'>
 				<a class='inline right primary button' style=''>Search</a>
 			</form>					
-			</div>
-			
+		</div>
+		<br>
+		<a class='primary button' onclick='show_modal(".ask")'>Ask a Question</a>
 
-			</form>
-	
+				<div id='dropdown' onclick='$("#dropdown_options").toggleclass("open")'>
+					<div class='secondary_header'>Sort Results<span class='right arrow'>&#9660;</span></div>
+					
+					<div class='footnote' id='dropdown_options'>
+					
+					
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="1" checked>
+							      <bullet>&#9679;</bullet>
+							      <span> Date posted</span>
+								</label>
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="3">
+							      <bullet>&#9679;</bullet>
+							      <span>Last activity</span>
+								</label>								
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="2" >
+							      <bullet>&#9679;</bullet>
+							      <span> Views</span>
+								</label>
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="4">
+							      <bullet>&#9679;</bullet>
+							      <span>Participation</span>
+								</label>
+					</div>
+				</div>
+				
 		</div>	
 		<div id='main'>
 							<div id='specialty'></div>
