@@ -31,7 +31,7 @@
     font-weight:bold;
 }
 
-a, div {
+a {
 	cursor:hand;
 }
 
@@ -502,7 +502,6 @@ margin-left:5px;
 
 .secondary_subsection {
 		padding:15px;
-		border-bottom: 1px solid #eee;
 }
 
 .secondary_header {
@@ -597,42 +596,8 @@ margin-left:5px;
 	width:20%;
 	display:inline-block;
 }
-.ck-button {
-    text-align:left;
-    color:#999;
-}
 
-.ck-button label {
-}
 
-.ck-button label span {
-    text-align:left;
-    padding: 2px 0px;
-    display:inline-block;
-	cursor:hand;
-    
-}
-
-.ck-button label input {
-    position:relative;
-    display:none;
-    width:100%;
-    background-color:#EFEFEF;
-
-}
-
-.ck-button input:hover + span {
-	color:#009245;
-}
-
-.ck-button input:checked + span {
-    color:#009245;
-}
-
-.ck-button input:checked + span:hover,
-.ck-button span:hover {
-	color:#5BB75B;
-}
 /*
 .ck-button span:hover:after {
 	content: " ✓";
@@ -763,9 +728,7 @@ input[type=password]
 /* Inbox */
 
 #list {
-	margin-top: 30px;
-	border-top:1px solid #ccc;
-	
+	margin-top: 30px;	
 }
 
 .list_item {
@@ -776,9 +739,11 @@ input[type=password]
 	width:100%;
 	background: #fff;
 	cursor: hand;
-
 }
 
+.list_item:first-child {
+	border-top: 1px solid #ccc;
+}
 .list_item img {
 	width:30px;
 	margin-right: 20px;
@@ -822,6 +787,8 @@ input[type=password]
 	opacity:0.8;
 }
 	
+	
+	
 /* Search page */
 
 #top_banner {
@@ -836,6 +803,11 @@ input[type=password]
 	cursor:hand;
 }
 
+#dropdown {
+	border-bottom:1px solid #ddd;
+	padding: 5px 15px;	
+	margin-top: 10px;
+}
 #dropdown_options {
 	max-height: 0%;
 	overflow: hidden;
@@ -843,9 +815,57 @@ input[type=password]
     transition:max-height 1.5s;
 }
 
-div:hover > #dropdown_options,
-div:active > #dropdown_options {
-	max-height: 100%;
+label {
+	margin-bottom: 4px;
+}
+#dropdown_options label{
+	display:block;
+}
+
+
+#dropdown:hover #dropdown_options {
+	max-height: 100%;	
+}
+
+.ck-button {
+    position:relative;
+    display:none;
+    width:100%;
+}
+
+.ck-button label span {
+    text-align:left;
+    padding: 2px 0px;
+    display:inline-block;
+	cursor:hand;
+}
+
+.ck-button:checked ~ span {
+    color:#009245;
+    font-family:Proxima-Nova-semibold;
+}
+
+.ck-button ~ span:hover {
+    color:#009245;
+
+}
+bullet {
+	opacity:0;
+    color:#009245;
+}
+
+.ck-button:checked ~ bullet {
+	opacity:1;
+}
+
+.arrow {
+	font-size: 0.5em;
+	-webkit-transition:all 0.5s;
+    transition: 0.5s;	
+}
+
+#dropdown:hover .arrow {
+	opacity:0;
 }
 /* Account Settings page */
 

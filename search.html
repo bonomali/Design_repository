@@ -58,44 +58,40 @@
 			<div class='secondary_subsection'>
 				<div class='secondary_header '>Questionnaire</div>
 				Are you seeking ongoing financial guidance, or one-time help with a specific life event?
-				<p class='metric_text'>
-					<input type='radio'><span>ongoing</span>
-					<input type='radio'><span>one-time</span>
-				</p>	
+				<form class='metric_text'>
+					<input type='radio'name="answer" value="1"><span>ongoing</span>
+					<input type='radio'name="answer" value="2"><span>one-time</span>
+				</form>	
 				
 				<a class='button primary' onclick='show_modal(".questionnaire")'>Get better matches</a>
 			</div>
 		</div>		
-				<div class='secondary_subsection' onclick='$("#dropdown_options").toggleclass("open")'>
-					<div class='secondary_header'>Sort Results <span class='right footnote'>&#9660;</span></div>
+				<div class='' id='dropdown' onclick='$("#dropdown_options").toggleclass("open")'>
+					<div class='secondary_header'>Sort Results<span class='right arrow'>&#9660;</span></div>
 					
-					<div class='metric_text' id='dropdown_options'>
-						<div class="ck-button">
-						   <label>
-						      <input type="checkbox" value="1" checked>
-						      <span>Show best matches</span>
-						   </label>
-						</div>
-	
-						<div class="ck-button" >
-						   <label>
-						      <input type="checkbox" value="1" checked>
-						      <span>show the highest maven scores</span>
-						   </label>
-						</div>
-			
-						
-						<span class="ck-button" >
-						   <label>
-						      <input type="checkbox" value="1"><span>show advisors closest to me</span>
-						   </label>
-						</span>
-	
-						<span class="ck-button" >
-						   <label>
-						      <input type="checkbox" value="1"><span>show the most responsive advisors</span>
-						   </label>
-						</span>
+					<div class='footnote' id='dropdown_options'>
+					
+					
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="1" checked>
+							      <bullet>&#9679;</bullet>
+							      <span> Best match</span>
+								</label>
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="3">
+							      <bullet>&#9679;</bullet>
+							      <span>Closest to me</span>
+								</label>								
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="2" >
+							      <bullet>&#9679;</bullet>
+							      <span> Highest maven score</span>
+								</label>
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="4">
+							      <bullet>&#9679;</bullet>
+							      <span>Most responsive</span>
+								</label>
 					</div>
 				</div>
 
