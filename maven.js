@@ -40,6 +40,7 @@ window.addEventListener("load",function() {
 //set links to advisor page
 $('.advisor_entry').attr('onclick', "location.href='advisor.html'");
 
+//tooltips
 $('.maven_score').prepend('<span class="tooltip">Maven Score measures how much an advisor participates in discussion</span>');
 $('.match_percentage').prepend('<span class="tooltip">Match percentage measures how closely this advisor aligns with your goals</span>');
 
@@ -151,17 +152,23 @@ function reply_message() {
 	$('.new textarea').focus();
 }
 
-//Populates list of niches where necessary
-var niches= ['Baby boomers','Business owners','Independent women','Inheritors','LGBT community','Married couples','Parents','Retirees','Young professionals']
+//Populates list of niches/specialties where necessary
+window.niches= ['Baby boomers','Business owners','Independent women','Inheritors','LGBT community','Married couples','Parents','Retirees','Young professionals']
 
 for (var i=0; i<niches.length; i++) 
-	{	$('#niche').append('<span class="ck-button choices"><label><input type="checkbox" value="1"><span>'+niches[i]+'</span></label></span>');
+	{	$('#niche').append('<span class="half ck-button choices"><label><input type="checkbox" value="1"><span>'+niches[i]+'</span></label></span>');
 	} 
 	
-var specialties= ['Investments', 'Financial Planning', 'Retirement Plans', 'Budget/Debt Management', '401(K)/403(B)/IRAS', 'Taxes And Accounting', 'Real Estate', 'Insurance', 'Estate Planning', 'Choosing An Advisor']
+window.specialties= ['Investments', 'Financial Planning', 'Retirement Plans', 'Budget/Debt Management', '401(K)/403(B)/IRAS', 'Taxes And Accounting', 'Real Estate', 'Insurance', 'Estate Planning', 'Choosing An Advisor']
 for (var i=0; i<specialties.length; i++) 
-	{	$('#specialty').append('<label class="choices"><input class="ck-button" type="checkbox" value="1"><span>'+specialties[i]+'</span></label>');
+	{	$('#specialty').append('<label class="choices"><input class="ck-button half" type="checkbox" value="1"><span>'+specialties[i]+'</span></label>');
+	}
+	
+//populates filters	
+for (var k=0; k<specialties.length; k++) 
+	{$('.filter').append('<label><input class="ck-button" type="checkbox" name="filter" value="1"><bullet>&#9679;</bullet><span> '+specialties[k]+'</span></label>');
 	} 
+	
 // Search page questionnaire
 var questions=['Are you seeking ongoing financial guidance, or one-time help with a specific life event?',
     				'Are you looking for help in any specific areas? We can match you with experts who are highly rated in these specialties.',
@@ -174,22 +181,5 @@ var questions=['Are you seeking ongoing financial guidance, or one-time help wit
     				'To what extent is "beating the market" important to you?',
     				'Ideally, how often do you want to catch up with your advisor over the long term?'		
     					]
-$(function(){
-		      $("#header").load("header.html"); 
-		    });
-		   
-		 var question_number=-1;
-		 var sequence=['question1','question2','question3','question4','question5','question6','question7','question8','question9','question10'];
-		  
-		 function next_question() {
-		 if (question_number==9){$('.question_box').remove();
-			 					 $('#main').attr('style','display:none');	
-			 					 $('.after').attr('style','display:inline');	
 
-		 }
-		 $('#'+sequence[question_number]).attr('style','display:none');		 	
-		 	question_number=question_number+1;
-		 $('#'+sequence[question_number]).attr('style','display:inline');
-			 $('#question').text(questions[question_number]);
-		 }
-        next_question();
+		   
