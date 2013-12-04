@@ -790,7 +790,10 @@ input[type=password]
 	
 	
 /* Search page */
-
+#change_button,
+#zip {
+	display:none;
+}
 #top_banner {
 	background:white;
 	border-bottom: 2px solid #5bb75b;

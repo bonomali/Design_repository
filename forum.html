@@ -37,14 +37,7 @@
 		
 		<div id="sidebar">
 		<span class='header1'>Question forum</span>
-		
-		<div class='secondary_body'>
-			<form name="input" action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search questions' style='width:67%' class='text_input seamless'>
-				<a class='inline right primary button' style=''>Search</a>
-			</form>					
-		</div>
-		<br>
+		<br><br>
 		<a class='primary button' onclick='show_modal(".ask")'>Ask a Question</a>
 
 				<div id='dropdown' onclick='$("#dropdown_options").toggleclass("open")'>
@@ -81,44 +74,53 @@
 					
 					<div class='footnote filter' id='dropdown_options'>
 					
-					
-								<label>
-							      <input class="ck-button" id='all' type="radio" name="filter" value="1" checked>
-							      <bullet>&#9679;</bullet>
-							      <span> Show all</span>
-								</label>
 
 					</div>
-				</div>				
+				</div>	
+				
+		<div class='secondary_body'>
+			<form name="input" action="html_form_action.asp" method="get">
+				<input type="text" name="user" placeholder='Search questions' style='width:67%' class='text_input seamless'>
+				<a class='inline right primary button' style=''>Search</a>
+			</form>					
+	</div>							
 		</div>	
 		<div id='main'>
 							<div id='specialty'></div>
 
 			<div class='search_result'>
 				<div class='question_entry hoverable' onclick="location.href='question.html';">
-					<div class='half cell'>
-						<span class='header2'>Can I use my 401(k) to invest in real estate?</span>
-						<span class='footnote'>asked 6 days ago</span>					
-					</div>
-					<div class='fifth cell'><pop>19</pop> replies</div>
-					<div class='fifth cell footnote'><pop>Retirement</pop>, <pop>Real estate</pop></div>
+					<div class='table'>
+						<div class='half cell'>
+							<span class='header2'>Can I use my 401(k) to invest in real estate?</span>
+							<span class='footnote'>asked 6 days ago</span>					
+						</div>
+						<div class='fifth cell'><pop>19</pop> replies</div>
+						<div class='fifth cell footnote'><pop>Retirement</pop>, <pop>Real estate</pop></div>
+					</div>	
 				</div>
-				<div class='question_entry'>
-					<div class='half cell'>
-						<span class='header2'>Can I use my 401(k) to invest in real estate?</span>
-						<span class='footnote'>asked 6 days ago</span>					
-					</div>
-					<div class='fifth cell'><pop>19</pop> replies</div>
-					<div class='fifth cell footnote'><pop>Retirement</pop>, <pop>Real estate</pop></div>
+
+				<div class='question_entry hoverable' onclick="location.href='question.html';">
+					<div class='table'>
+						<div class='half cell'>
+							<span class='header2'>Can I use my 401(k) to invest in real estate?</span>
+							<span class='footnote'>asked 6 days ago</span>					
+						</div>
+						<div class='fifth cell'><pop>19</pop> replies</div>
+						<div class='fifth cell footnote'><pop>Retirement</pop>, <pop>Real estate</pop></div>
+					</div>	
 				</div>
-				<div class='question_entry'>
-					<div class='half cell'>
-						<span class='header2'>Can I use my 401(k) to invest in real estate?</span>
-						<span class='footnote'>asked 6 days ago</span>					
-					</div>
-					<div class='fifth cell'><pop>19</pop> replies</div>
-					<div class='fifth cell footnote'><pop>Retirement</pop>, <pop>Real estate</pop></div>
-				</div>
+				
+				<div class='question_entry hoverable' onclick="location.href='question.html';">
+					<div class='table'>
+						<div class='half cell'>
+							<span class='header2'>Can I use my 401(k) to invest in real estate?</span>
+							<span class='footnote'>asked 6 days ago</span>					
+						</div>
+						<div class='fifth cell'><pop>19</pop> replies</div>
+						<div class='fifth cell footnote'><pop>Retirement</pop>, <pop>Real estate</pop></div>
+					</div>	
+				</div>				
 			</div>
 		</div>
 	</div>

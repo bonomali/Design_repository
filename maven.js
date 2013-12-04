@@ -44,6 +44,16 @@ $('.advisor_entry').attr('onclick', "location.href='advisor.html'");
 $('.maven_score').prepend('<span class="tooltip">Maven Score measures how much an advisor participates in discussion</span>');
 $('.match_percentage').prepend('<span class="tooltip">Match percentage measures how closely this advisor aligns with your goals</span>');
 
+// change location
+
+function change_zip() {
+	$('#zip').toggle();
+	$('#zip').focus();
+
+	$('#city').toggle();
+	$('#change_button').toggle();
+	
+}
 /*
 function multi_message(target) {												//sets each advisor entry to add the advisor's name to the recipients list per 'onclick'
 	$('#top_banner').show(200);
@@ -156,18 +166,19 @@ function reply_message() {
 window.niches= ['Baby boomers','Business owners','Independent women','Inheritors','LGBT community','Married couples','Parents','Retirees','Young professionals']
 
 for (var i=0; i<niches.length; i++) 
-	{	$('#niche').append('<span class="half ck-button choices"><label><input type="checkbox" value="1"><span>'+niches[i]+'</span></label></span>');
+	{	$('#niche').append('<span class=" ck-button choices"><label><input type="checkbox" value="1"><span class="half">'+niches[i]+'</span></label></span>');
 	} 
 	
 window.specialties= ['Investments', 'Financial Planning', 'Retirement Plans', 'Budget/Debt Management', '401(K)/403(B)/IRAS', 'Taxes And Accounting', 'Real Estate', 'Insurance', 'Estate Planning', 'Choosing An Advisor']
 for (var i=0; i<specialties.length; i++) 
-	{	$('#specialty').append('<label class="choices"><input class="ck-button half" type="checkbox" value="1"><span>'+specialties[i]+'</span></label>');
+	{	$('#specialty').append('<label class="choices"><input class="ck-button" type="checkbox" value="1"><span class="">'+specialties[i]+'</span></label>');
 	}
 	
 //populates filters	
 for (var k=0; k<specialties.length; k++) 
-	{$('.filter').append('<label><input class="ck-button" type="checkbox" name="filter" value="1"><bullet>&#9679;</bullet><span> '+specialties[k]+'</span></label>');
+	{$('.filter').append('<label><input class="ck-button topic" type="checkbox" name="filter" value="1"><bullet>&#9679;</bullet><span> '+specialties[k]+'</span></label>');
 	} 
+
 	
 // Search page questionnaire
 var questions=['Are you seeking ongoing financial guidance, or one-time help with a specific life event?',

@@ -44,9 +44,17 @@
 		</div>
 	<div class='container'>
 		<div id="sidebar">
-		<span class='header1'>Advisor search</span>
-		
+			<span class='header1'>Advisor search</span>
+			<div>
+	
+			<span class='footnote'>near</span> <a id='city' onclick='change_zip()'><pop>San Francisco</pop></a>
+			<input type="text" name="zip" id="zip" placeholder='(new ZIP code)' style='width:120px; height:25px' class='text_input seamless footnote'>
+
+			<a class='green metric_text' onclick='change_zip()' id='change_button'> search</a>
+		</div>
+		<br>
 		<div class='secondary_body'>
+
 			<form name="input" action="html_form_action.asp" method="get">
 				<input type="text" name="user" placeholder='Search by name' style='width:67%' class='text_input seamless'>
 				<a class='inline right primary button' style=''>Search</a>
@@ -55,7 +63,7 @@
 		</div>
 		
 		<div class='secondary_body'>
-			<div class='secondary_subsection' style='border-top:5px solid #5bb75b'>
+			<div class='secondary_subsection'>
 				<div class='secondary_header '>Questionnaire</div>
 				Are you seeking ongoing financial guidance, or one-time help with a specific life event?
 				<form class='metric_text'>
