@@ -36,9 +36,9 @@
 	</div>
 	
 	
-	<div id='top_banner'>
-			<span onclick='multi_message_confirm()'>Select recipients, then tap here to compose message</span>
-			<a class='right' onclick='multi_message_cancel()'>Cancel</a> 
+	<div id='bottom_banner' onclick='show_modal(".questionnaire")'>
+
+			<span ><pop>Get better matches</pop> Take the match questionnaire</span>
 	</div>
 		<div id='header'>
 		</div>
@@ -47,10 +47,8 @@
 			<span class='header1'>Advisor search</span>
 			<div>
 	
-			<span class='footnote'>near</span> <a id='city' onclick='change_zip()'><pop>San Francisco</pop></a>
-			<input type="text" name="zip" id="zip" placeholder='(new ZIP code)' style='width:120px; height:25px' class='text_input seamless footnote'>
-
-			<a class='green metric_text' onclick='change_zip()' id='change_button'> search</a>
+			<span class='footnote'>near</span> <a onclick='change_zip()'><span class='metric_text green' id='city'>San Francisco</span></a>
+			<input type="text" name="zipcode" id="zip" placeholder='ZIP code' style='width:80px; height:25px' class='text_input seamless footnote'>
 		</div>
 		<br>
 		<div class='secondary_body'>
@@ -60,11 +58,9 @@
 				<a class='inline right primary button' style=''>Search</a>
 			</form>
 			
-		</div>
-		
-		<div class='secondary_body'>
+
 			<div class='secondary_subsection'>
-				<div class='secondary_header '>Questionnaire</div>
+				<div class='secondary_header '>Improve your results</div>
 				Are you seeking ongoing financial guidance, or one-time help with a specific life event?
 				<form class='metric_text'>
 					<input type='radio'name="answer" value="1"><span>ongoing</span>
@@ -201,6 +197,7 @@
 	
 	</div>
 	</div>	
+	<script src="http://ziplookup.googlecode.com/git/public/ziplookup/zipLookup.min.js" type="text/javascript"></script>	
 	<script src='maven.js'></script>
  
 </body>

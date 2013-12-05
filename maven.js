@@ -36,6 +36,7 @@ window.addEventListener("load",function() {
     }, 0);
 });
 //Search page
+	$('#bottom_banner').show(200);
 
 //set links to advisor page
 $('.advisor_entry').attr('onclick', "location.href='advisor.html'");
@@ -52,7 +53,27 @@ function change_zip() {
 
 	$('#city').toggle();
 	$('#change_button').toggle();
-	
+
+}
+
+$('#zip').keypress(function(e) {
+    if(e.which == 13) {
+		readzip();
+		change_zip();
+    }
+});
+function readzip() {
+
+   $.zipLookupSettings.libDirPath = 'http://ziplookup.googlecode.com/git/public/ziplookup/'               // (Optionally) set the library folder path manually
+
+
+    $.zipLookup(                                            				// Do a Zip code Lookup
+        $('input[name=zipcode]').val(),                      				// Zip code Field Value
+        
+        function(cityName, stateName, stateShortName){      				// If Successful,
+               $('#city').text(cityName+', '+stateShortName);            				// Set City name
+				}
+				)
 }
 /*
 function multi_message(target) {												//sets each advisor entry to add the advisor's name to the recipients list per 'onclick'
