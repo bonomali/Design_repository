@@ -48,16 +48,18 @@ $('.match_percentage').prepend('<span class="tooltip">Match percentage measures 
 // change location
 
 function change_zip() {
-	$('#zip').toggle();
-	$('#zip').focus();
+	//$('.zip').toggle();
+	$('.zip').toggleClass('open');
+	$('.zip').focus();
 
 	$('#city').toggle();
-	$('#change_button').toggle();
+	$('#close').toggle();
 
+	$('#zip').val('');
 }
 
-$('#zip').keypress(function(e) {
-    if(e.which == 13) {
+$('#zip').keyup(function() {
+    if($('#zip').val().length>4) {
 		readzip();
 		change_zip();
     }
