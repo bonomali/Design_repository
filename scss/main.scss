@@ -123,9 +123,34 @@ body{
 
 .advisor_full {
 	float:left;
-	margin-right:30px;
-	border:1px solid #eee;
+	margin-right:50px;
 	width:12%;
+	position: relative;
+
+	img{
+		border:1px solid #eee;
+		
+	}
+
+	#picture_edit {
+		position:absolute;
+		text-align: center;
+		top:40%;
+		width:100%;
+		height:100%;
+		display:none
+	}
+	
+	&:hover{
+		
+		img{
+			opacity:0.1;
+		}
+		
+		#picture_edit {
+			display:block;
+		}
+	}
 }
 /*Typography*/
 b {
@@ -631,7 +656,14 @@ input[type=password]
 }
 
 /* Advisor page */
-
+.edit {
+	display:none;
+}
+#firm:hover {
+	.edit {
+		display:inline;
+	}
+}
 #top_banner {
 	background:white;
 	border-bottom: 2px solid $light_green;
