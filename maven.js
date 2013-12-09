@@ -76,7 +76,7 @@ function readzip() {
         
 		function(cityName, stateName, stateShortName){      												// If Successful,
           	$('#city').text('...');
-            $('#city').text(cityName+', '+stateShortName+' ('+inputted_zip+')');            				// Set City name
+            $('#city').text(cityName+', '+stateShortName);            				// Set City name
 			change_zip();																					// hide ZIP field and show city name
 				},
 				
