@@ -131,8 +131,8 @@ body {
 /* line 124, scss/main.scss */
 .advisor_full {
   float: left;
-  margin-right: 50px;
-  width: 12%;
+  margin-right: 25px;
+  width: 15%;
   position: relative;
 }
 /* line 130, scss/main.scss */

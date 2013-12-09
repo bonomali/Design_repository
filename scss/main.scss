@@ -122,9 +122,9 @@ body{
 }
 
 .advisor_full {
-	float:left;
-	margin-right:50px;
-	width:12%;
+	float: left;
+	margin-right: 25px;
+	width: 15%;
 	position: relative;
 
 	img{
@@ -142,7 +142,7 @@ body{
 	}
 	
 	&:hover{
-		
+				
 		img{
 			opacity:0.1;
 		}
