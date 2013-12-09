@@ -12,7 +12,7 @@
 		<div class='modal_window' id='profile'>
 			<div class='subsection'>
 				<span class='section_head'>Compose message</span>
-				To:<pop id='advisor_name'> Kathleen Hentges</pop>
+				To: <pop id='advisor_name'> Kathleen Hentges</pop>
 				<p>
 				<textarea rows='6' class='full text_input' placeholder='Write your message here'></textarea>
 				</p>
@@ -24,10 +24,21 @@
 		</div>
 	</div>
 
-	<div class='report modal'>
+	<div class='rate modal'>
 		<div id='fader'></div>
 		<div class='modal_window' id='profile'>
-		
+			<div class='subsection'>
+				<span class='section_head'>rate this advisor</span>
+				<p>Would you recommend this advisor to a friend?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="5" data-highlight="true">
+						<span style="margin-top:30px"> not at all <span class=" right"> strongly</span></span>
+				</div>
+				<div class='half'>
+					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
+					<a class='primary paired button'>OK</a>					
+				</div>	
+			</div>		
 		</div>
 	</div>
 	<div id='top_banner'>Message sent</div>
@@ -40,13 +51,12 @@
 	
 		<p>
 			<div class='right standard'>
-		 	 	<a class=' secondary button'>Rate advisor</a>
+		 	 	<a class=' secondary button' onclick='show_modal(".rate")'>Rate advisor</a>
 			 	<a class='  primary button' onclick='show_modal(".compose")'>Contact</a>
 			</div>	
 			<img src='assets/kathleen.jpg' class='advisor_full'>	
 			<span class='green header1'>Kathleen A. Henteges <span><span class='tooltip'>This advisor has a clean FINRA record</span><img src='assets/approved.png' class='approved'></span></span> <br>
-			<span class=''>3150 18th St Ste 219
-San Francisco, CA 94110-2076</span><br>
+			<span class=''>UBS Financial Services</span><br>
 
 			Specializes in <pop>investments</pop>,
 			recommended by <pop>parents</pop>
@@ -59,21 +69,18 @@ San Francisco, CA 94110-2076</span><br>
 				<span class='tooltip'>how this advisor aligns with your needs</span>								
 				<div class="big_number">94% </div>
 				<div class='small'>match</div>
-				<div class='small'>with you</div>
 			</div>
 			<div class='maven badge'>
 				<span class='tooltip'>Participation</span>			
 				<div class="big_number">73&#10029</div>
 				<div class='small'>maven</div>
-				<div class='small'>score</div>
 
 			</div>			
-			<div class='rating badge'>
-				<span class='tooltip'>Average rating from users</span>
-				<div class="big_number">3.8/5</div>
-				<div class='small'>user</div>				
-				<div class='small'>rating</div>
-			</div>	
+<div class="rating badge">
+				<span class="tooltip">Average rating from users</span>
+				<div class="big_number">3.8</div>
+				<div class="small">rating</div>
+			</div>
 			</div>
 		</p>
 		
@@ -134,110 +141,81 @@ Workers in bankruptcy situations face two important issues when it comes to thei
 
 
 	<div class='subsection'>
-			<span class='section_head'>disclosures</span>
-		<a class='right' onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);
-'>See full report</a>
+		<span class='section_head'>Employment and compliance history</span>
+			<p>
+				August 2011 - Present
 
-		<div class='disclosures'>
-			<div class='disclosure_event'>
-				<div class='cell'>
-					<b>Event</b>
+				<pop>UBS Financial Services</pop> <span class='footnote'>in San Francisco</span>
+				<div class='footnote disclosures'>
+					<div>February 4, 2013 Customer complaint <a onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>(See report)</a></div>
+					<div id='report'>
+					<div class='row'>
+						<div class='header3 cell'>Allegations</div> 
+						<p class='cell footnote' style='text-transform:capitalize'>TIME FRAME?NOVEMBER 2007 - SEPTEMBER 2008 CLAIMANT ALLEGES THAT HER INVESTMENTS IN PRINCIPAL-PROTECTED STRUCTURED PRODUCTS WERE MISREPRESENTED AS SAFE AND INFALLIBLE. CLAIMANT FURTHER ALLEGES THAT THE STRUCTURED PRODUCTS WERE UNSUITABLE IN LIGHT OF HER CONSERVATIVE INVESTMENT OBJECTIVES.</p>
+					</div>
+					<div class='row'>				
+						<div class='header3 cell'>Product type</div> 
+						<p class='cell footnote'>Other: STRUCTURED PRODUCTS</p>
+					</div>
+					<div class='row'>	
+						<div class='header3 cell'>Alleged Damages</div>
+						<p class='cell footnote'> $300,000</p>
+					</div>
+					<div class='row'>					 
+						<div class='header3 cell'>Settlement Amount</div> 
+						<p class='cell footnote'>$95,000</p>
+					</div>
+					<div class='row'>					
+						<div class='header3 cell'>Summary</div> 
+						<p class='cell footnote'>Claimants have not asserted any claims against me, are not seeking any award against me, and have not named or joined me as a respondent in this action. All claims are asserted against UBS Financial Services and not against me. This in their claim, claimants specifically state that "claimants firmly believe that their broker did not intentionally mislead them, but rather was an innocent conduit for the firm's recommendations." The matter has now been resolved between UBS and claimants. Consistent with the lack of any claims against me, I have neither been asked, nor directed, to contribute any amount towards the resolution.</p>
+					</div>
 				</div>
-				<div class='cell'>
-					<b>Date</b>
+					<div onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>December 11, 2012 Customer complaint <a>(See report)</a></div>
+					<div onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>October 24, 2011 Customer complaint <a>(See report)</a></div>
 				</div>
-				<div class='cell'>
-					<b>Firm</b>
+			</p>
+
+			<p>
+				March 2004 - May 2011
+
+				<pop>Morgan Stanley</pop> <span class='footnote'>in New York</span>
+				<div class='footnote disclosures'>December 11, 2012 Customer complaint <a>(See report)</a></div>
+			</p>
+
+			<p>
+				July 1998 - December 2010
+
+				<pop>Lehman Brothers</pop> <span class='footnote'>in Los Angeles</span>
+				<div class='footnote disclosures'>
+					<div>February 4, 2013 Customer complaint <a onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>(See report)</a></div>
+					<div id='report'>
+					<div class='row'>
+						<div class='header3 cell'>Allegations</div> 
+						<p class='cell footnote' style='text-transform:capitalize'>TIME FRAME?NOVEMBER 2007 - SEPTEMBER 2008 CLAIMANT ALLEGES THAT HER INVESTMENTS IN PRINCIPAL-PROTECTED STRUCTURED PRODUCTS WERE MISREPRESENTED AS SAFE AND INFALLIBLE. CLAIMANT FURTHER ALLEGES THAT THE STRUCTURED PRODUCTS WERE UNSUITABLE IN LIGHT OF HER CONSERVATIVE INVESTMENT OBJECTIVES.</p>
+					</div>
+					<div class='row'>				
+						<div class='header3 cell'>Product type</div> 
+						<p class='cell footnote'>Other: STRUCTURED PRODUCTS</p>
+					</div>
+					<div class='row'>	
+						<div class='header3 cell'>Alleged Damages</div>
+						<p class='cell footnote'> $300,000</p>
+					</div>
+					<div class='row'>					 
+						<div class='header3 cell'>Settlement Amount</div> 
+						<p class='cell footnote'>$95,000</p>
+					</div>
+					<div class='row'>					
+						<div class='header3 cell'>Summary</div> 
+						<p class='cell footnote'>Claimants have not asserted any claims against me, are not seeking any award against me, and have not named or joined me as a respondent in this action. All claims are asserted against UBS Financial Services and not against me. This in their claim, claimants specifically state that "claimants firmly believe that their broker did not intentionally mislead them, but rather was an innocent conduit for the firm's recommendations." The matter has now been resolved between UBS and claimants. Consistent with the lack of any claims against me, I have neither been asked, nor directed, to contribute any amount towards the resolution.</p>
+					</div>
 				</div>
-				<div class='cell'>
-					<b>Outcome</b>
+					<div onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>December 11, 2012 Customer complaint <a>(See report)</a></div>
+
 				</div>
-			</div>
-			<div class='disclosure_event'>
-				<div class='cell'>
-					<pop>Customer complaint</pop>
-				</div>
-				<div class='cell'>
-					4/3/13
-				</div>
-				<div class='cell'>
-					UBS Financial Services
-				</div>
-				<div class='cell'>
-					Resolved
-				</div>
-			</div>
-			<div class='disclosure_event'>
-				<div class='cell'>
-					<pop>Customer complaint</pop>
-				</div>
-				<div class='cell'>
-					12/30/11
-				</div>
-				<div class='cell'>
-					UBS Financial Services
-				</div>
-				<div class='cell'>
-					Resolved
-				</div>
-			</div>
-			<div class='disclosure_event'>
-				<div class='cell'>
-					<pop>Customer complaint</pop>
-				</div>
-				<div class='cell'>
-					2/13/11
-				</div>
-				<div class='cell'>
-					UBS Financial Services
-				</div>
-				<div class='cell'>
-					Resolved
-				</div>
-			</div>
-			<div class='disclosure_event'>
-				<div class='cell'>
-					<pop>Customer complaint</pop>
-				</div>
-				<div class='cell'>
-					7/20/01
-				</div>
-				<div class='cell'>
-					UBS Financial Services
-				</div>
-				<div class='cell'>
-					Resolved
-				</div>
-			</div>									
-		</div>	
+			</p>			
 	</div>
-	<div class='subsection' id='report'>
-				<span class='section_head'>Full report</span>
-				<div>
-				<span class='header2'>Event 1</span>
-				<div class='row'>
-					<div class='header3 cell'>Allegations</div> 
-					<p class='cell footnote'>TIME FRAME?NOVEMBER 2007 - SEPTEMBER 2008 CLAIMANT ALLEGES THAT HER INVESTMENTS IN PRINCIPAL-PROTECTED STRUCTURED PRODUCTS WERE MISREPRESENTED AS SAFE AND INFALLIBLE. CLAIMANT FURTHER ALLEGES THAT THE STRUCTURED PRODUCTS WERE UNSUITABLE IN LIGHT OF HER CONSERVATIVE INVESTMENT OBJECTIVES.</p>
-				</div>
-				<div class='row'>				
-					<div class='header3 cell'>Product type</div> 
-					<p class='cell footnote'>Other: STRUCTURED PRODUCTS</p>
-				</div>
-				<div class='row'>	
-					<div class='header3 cell'>Alleged Damages</div>
-					<p class='cell footnote'> $300,000</p>
-				</div>
-				<div class='row'>					 
-					<div class='header3 cell'>Settlement Amount</div> 
-					<p class='cell footnote'>$95,000</p>
-				</div>
-				<div class='row'>					
-					<div class='header3 cell'>Summary</div> 
-					<p class='cell footnote'>Claimants have not asserted any claims against me, are not seeking any award against me, and have not named or joined me as a respondent in this action. All claims are asserted against UBS Financial Services and not against me. This in their claim, claimants specifically state that "claimants firmly believe that their broker did not intentionally mislead them, but rather was an innocent conduit for the firm's recommendations." The matter has now been resolved between UBS and claimants. Consistent with the lack of any claims against me, I have neither been asked, nor directed, to contribute any amount towards the resolution.</p>
-				</div>	
-				</div>
-				</div>	
-			</div>			
+		
 </div>	
 		<script src='jquery-1.9.1.min.js'></script>
 		<script src='maven.js'></script>

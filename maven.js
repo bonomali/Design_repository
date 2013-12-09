@@ -48,34 +48,45 @@ $('.match_percentage').prepend('<span class="tooltip">Match percentage measures 
 // change location
 
 function change_zip() {
-	//$('.zip').toggle();
-	$('.zip').toggleClass('open');
+
+	$('.zip').toggle();
+	//$('.zip').toggleClass('open');
 	$('.zip').focus();
 
-	$('#city').toggle();
-	$('#close').toggle();
+	$('.city').toggle();						//city show/hide
+	$('#near').toggleClass('ellipsis');
+	$('#zip').val('');							//clear ZIP code field for next entry
+	$('#zip').attr('placeholder','(enter ZIP code)');                    //in case placeholder got changed to error statement, change it back
+	$('.close').toggleClass('open');						//close button show/hide
 
-	$('#zip').val('');
 }
 
 $('#zip').keyup(function() {
     if($('#zip').val().length>4) {
 		readzip();
-		change_zip();
     }
 });
+
 function readzip() {
-
    $.zipLookupSettings.libDirPath = 'http://ziplookup.googlecode.com/git/public/ziplookup/'               // (Optionally) set the library folder path manually
-
+   var inputted_zip=$('input[name=zipcode]').val();
 
     $.zipLookup(                                            				// Do a Zip code Lookup
-        $('input[name=zipcode]').val(),                      				// Zip code Field Value
+        inputted_zip,                      									// Zip code Field Value
         
-        function(cityName, stateName, stateShortName){      				// If Successful,
-               $('#city').text(cityName+', '+stateShortName);            				// Set City name
-				}
+		function(cityName, stateName, stateShortName){      												// If Successful,
+          	$('#city').text('...');
+            $('#city').text(cityName+', '+stateShortName+' ('+inputted_zip+')');            				// Set City name
+			change_zip();																					// hide ZIP field and show city name
+				},
+				
+		function(errMsg){                                   				// If Zip couldn't be found,
+			$('#zip').val('');           
+			$('#zip').attr('placeholder','(Invalid ZIP. Try again?)');                    
+           }					
 				)
+				
+			
 }
 /*
 function multi_message(target) {												//sets each advisor entry to add the advisor's name to the recipients list per 'onclick'

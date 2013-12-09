@@ -46,32 +46,28 @@
 		<div id="sidebar">
 			<span class='header1'>Advisor search</span>
 
-			<div class='secondary_body secondary_subsection'>
-				<div class='subsection_head'>Improve your results</div>
-				Are you seeking ongoing financial guidance, or one-time help with a specific life event?
-				<form class='metric_text'>
-					<input type='radio'name="answer" value="1"><span>ongoing</span>
-					<input type='radio'name="answer" value="2"><span>one-time</span>
-				</form>	
-				
-				<a class='button primary' onclick='show_modal(".questionnaire")'>Get better matches</a>
-			</div>
+
 		<div>
 			<div id='location' class='secondary_subsection'>
-				<div class='subsection_head zip'>search new area</div>
-				<span class='footnote'>
-					Near
-					<a><span class='green' onclick='change_zip()' id='city'>San Francisco</span></a>
-				</span> 
-				<input type="text" name="zipcode" id="zip" placeholder='ZIP code' style='width:80px; height:25px' class='text_input seamless footnote zip'>
-				<span class=' right cell footnote zip'  onclick='change_zip()'>&#10005</span>
+				<span class=' right cell footnote close' onclick='change_zip()'>&#10005</span>
+				<div class='footnote'>
+					<span id='near'>Near</span>
+					<span class='city open' onclick='change_zip()' id='city'>San Francisco</span>
+					<input type="text" name="zipcode" id="zip" placeholder='(enter ZIP code)' style='width:160px; font-size:inherit' class='text_input seamless footnote zip'>			
+					<span class='error'></span>
+				</div> 
 			</div>		
 
 			
 
-
+			<form name="input" class='secondary_subsection'action="html_form_action.asp" method="get">
+				<input type="text" name="user" placeholder='Search by name' style='width:67%;' class='footnote seamless'>
+				<a class='inline right text_button' style=''>Search</a>
+			</form>	
 			<div id='dropdown' class='secondary_subsection ' onclick='$(".dropdown_options").toggleclass("open")'>
+
 				<div class='subsection_head'>Sort Results<span class='right arrow'>&#9660;</span></div>		
+
 				<div class='dropdown_options footnote'>				
 					<label>
 						<input class="ck-button" type="radio" name="sort" value="1" checked>
@@ -95,12 +91,18 @@
 					</label>
 				</div>
 			</div>
-			<form name="input" action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search by name' style='width:67%;' class='text_input seamless'>
-				<a class='inline right primary button' style=''>Search</a>
-			</form>			
+		
 		</div>		
+							<div class='secondary_body secondary_subsection'>
+				<div class='subsection_head'>Improve your results</div>
+				Are you seeking ongoing financial guidance, or one-time help with a specific life event?
+				<form class='metric_text'>
+					<input type='radio'name="answer" value="1"><span>ongoing</span>
+					<input type='radio'name="answer" value="2"><span>one-time</span>
+				</form>	
 				
+				<a class='button primary' onclick='show_modal(".questionnaire")'>Get better matches</a>
+			</div>
 	</div>
 		
 		<div id='main'>
