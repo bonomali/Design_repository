@@ -79,8 +79,7 @@
 			<span class='green header1'>Kathleen A. Henteges <span><span class='tooltip'>This advisor has a clean FINRA record</span><img src='assets/approved.png' class='approved'></span></span> <br>
 			<div id='bio' onclick='alert("modal to edit bio here")'><i>I enjoy helping people achieve their financial goals.</i></div>
 			
-			<div class='footnote' style='margin-top: 6px;'>
-				<span id='firm'>UBS Financial Services <span class='green edit' onclick="show_modal('.firm')">(edit)</span></span><br>
+			<div class='' style='margin-top: 6px;'>
 	
 				Specializes in <pop>investments</pop>,
 				recommended by <pop>parents</pop>
@@ -93,14 +92,14 @@
 			</div>
 			<div class='maven badge'>
 				<span class='tooltip'>Participation</span>			
-				<div class="big_number">73&#10029</div>
-				<div class='small'>maven</div>
+				<div class="big_number">73</div>
+				<div class='small'>maven score</div>
 
 			</div>			
 <div class="rating badge">
 				<span class="tooltip">Average rating from users</span>
-				<div class="big_number">3.8</div>
-				<div class="small">rating</div>
+				<div class="big_number">&#10029&#10029&#10029&#10025&#10025</div>
+				<div class="small">avg. user rating</div>
 			</div>
 			</div>
 		</p>
@@ -163,10 +162,12 @@ Workers in bankruptcy situations face two important issues when it comes to thei
 
 	<div class='subsection'>
 		<span class='section_head'>Employment and compliance history</span>
+			<p>				<span class='green' onclick="show_modal('.firm')">Add new firm</span></p>
 			<p>
 				August 2011 - Present
 				<pop>UBS Financial Services</pop> <span class='footnote'>55 California Street, San Francisco, CA 94111</span>
-				<div class='footnote disclosures'>
+				<div class='green disclosures' onclick='$(".ubs").show(); $(this).remove()'>Show 3 disclosures</div>
+				<div class='footnote disclosures ubs' style='display:none'>
 					<div><b>February 4, 2013</b> Customer complaint <a onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>(See report)</a></div>
 					<div id='report'>
 					<div class='row'>
@@ -198,16 +199,16 @@ Workers in bankruptcy situations face two important issues when it comes to thei
 			<p>
 				March 2004 - May 2011
 				<pop>Morgan Stanley</pop> <span class='footnote'>522 5th Ave #15, New York, NY 10036</span>
-				<div class='footnote disclosures'><b>December 11, 2008</b> Customer complaint <a>(See report)</a></div>
+				<div class='green disclosures' onclick='$(".ubs").show(); $(this).remove()'>Show 1 disclosure</div>
 			</p>
 
 			<p>
 				July 1998 - December 2010
 				<pop>Lehman Brothers</pop> <span class='footnote'>700 S Flower Street Lowr
 Los Angeles, CA 90017</span>
+				<div class='green disclosures' onclick='$(".ubs").show(); $(this).remove()'>Show 3 disclosures</div>
+
 				<div class='footnote disclosures'>
-					<div><b>February 4, 2000</b> Customer complaint <a onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>(See report)</a></div>
-					<div><b>December 11, 1998</b> Customer complaint <a>(See report)</a></div>
 
 				</div>
 			</p>						

@@ -208,10 +208,11 @@ form {
 	width: 150px;
 }
 	.text_button {
-		color:$dark_green;
 		font-size: 0.9em;
 		text-transform: uppercase;
 		line-height: normal;
+		color:#999;
+		
 	}
 }
 
@@ -466,10 +467,17 @@ margin-left:5px;
 	
 }
 
-
-.hoverable:hover {
-	border: 1px solid $light_green;
+.search_result:hover {
+	.hoverable {
+		background-color: #fafafa;
+		
+		&:hover {
+			background-color: white;
+			outline: 1px solid $light_green;
+		}
+	}
 }
+
 
 .advisor_entry {
 	background-color:white;
@@ -875,6 +883,7 @@ border-left: 5px solid $light_green;
 .ellipsis:after {
 	content:"...   ";
 }
+
 #city {
 	font-family: Proxima-Nova-semibold;
 	text-transform: uppercase;
@@ -884,6 +893,13 @@ border-left: 5px solid $light_green;
 	}
 }
 
+form {
+	
+	input:focus + a {
+		color:$dark_green;
+;
+	}
+} 
 #bottom_banner {
 	background: white;
 	border-top: 2px solid $light_green;

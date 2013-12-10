@@ -42,7 +42,7 @@ window.addEventListener("load",function() {
 $('.advisor_entry').attr('onclick', "location.href='advisor.html'");
 
 //tooltips
-$('.maven_score').prepend('<span class="tooltip">Maven Score measures how much an advisor participates in discussion</span>');
+$('.maven_score').prepend('<span class="tooltip">Average user rating (out of 5 stars maximum)</span>');
 $('.match_percentage').prepend('<span class="tooltip">Match percentage measures how closely this advisor aligns with your goals</span>');
 
 // change location
