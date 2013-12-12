@@ -45,12 +45,18 @@ $('.advisor_entry').attr('onclick', "location.href='advisor.html'");
 $('.maven_score').prepend('<span class="tooltip">Average user rating (out of 5 stars maximum)</span>');
 $('.match_percentage').prepend('<span class="tooltip">Match percentage measures how closely this advisor aligns with your goals</span>');
 
+
+
 // change location
-
+function show_city() {
+	$('.zip').hide();
+	$('.city').show();
+	$('.close').removeClass('open');						//close button show/hide
+	$('#near').removeClass('ellipsis');
+	
+}
 function change_zip() {
-
 	$('.zip').toggle();
-	//$('.zip').toggleClass('open');
 	$('.zip').focus();
 
 	$('.city').toggle();						//city show/hide
@@ -58,7 +64,6 @@ function change_zip() {
 	$('#zip').val('');							//clear ZIP code field for next entry
 	$('#zip').attr('placeholder','(enter ZIP code)');                    //in case placeholder got changed to error statement, change it back
 	$('.close').toggleClass('open');						//close button show/hide
-
 }
 
 $('#zip').keyup(function() {
@@ -77,7 +82,8 @@ function readzip() {
 		function(cityName, stateName, stateShortName){      												// If Successful,
           	$('#city').text('...');
             $('#city').text(cityName+', '+stateShortName);            				// Set City name
-			change_zip();																					// hide ZIP field and show city name
+			change_zip();															// hide ZIP field and show city name
+			$('.zip').blur();	
 				},
 				
 		function(errMsg){                                   				// If Zip couldn't be found,

@@ -44,16 +44,16 @@
 		</div>
 	<div class='container'>
 		<div id="sidebar">
-			<span class='header1'>Advisor search</span>
+			<span class='header1 mobile_container'>Advisor search</span>
 
 
 		<div>
 			<div id='location' class='secondary_subsection'>
-				<span class=' right cell footnote close' onclick='change_zip()'>&#10005</span>
+				<span class=' right cell footnote close' onclick=''>&#10005</span>
 				<div class='footnote'>
 					<span id='near'>Near</span>
-					<span class='city open' onclick='change_zip()' id='city'>San Francisco</span>
-					<input type="text" name="zipcode" id="zip" placeholder='(enter ZIP code)' style='width:160px; font-size:inherit' class='text_input seamless footnote zip'>			
+					<span class='city open' onclick='change_zip()' id='city'>San Francisco, CA</span>
+					<input type="text" name="zipcode" id="zip" placeholder='(enter ZIP code)' style='margin-top:1px;width:160px; font-size:inherit' class='text_input seamless footnote zip' onblur='show_city()'>			
 					<span class='error'></span>
 				</div> 
 			</div>		
@@ -61,7 +61,7 @@
 			
 
 			<form name="input" class='secondary_subsection'action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search by name' style='width:67%;' class='footnote seamless'>
+				<input type="text" name="user" placeholder='Search by name' style='width:67%; margin-top:1px;' class='footnote seamless'>
 				<a class='inline right text_button' style=''>Search</a>
 			</form>	
 			<div id='dropdown' class='secondary_subsection ' onclick='$(".dropdown_options").toggleclass("open")'>
