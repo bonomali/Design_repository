@@ -13,65 +13,64 @@
 	
 		<div id="sidebar">
 			<span class='header1'>Inbox</span>
-			<div id='list'>
+			
+			<div class='list'>
 				<div id='list_slider'>
-				<div class='item hoverable active'>
-					<img src='assets/kathleen.jpg' class=''>
-					<div class='item_text'>
-						<div class='header3'>Kathleen Henteges</div>
-						<span class='footnote'>wrote you 2 minutes ago</span>
+					<div id='unreplied_messages' class='dropdown'>
+						<div class='item hoverable active'>
+							<img src='assets/kathleen.jpg' class=''>
+							<div class='item_text'>
+								<div class='green header3'>Kathleen Henteges</div>
+								<span class='footnote'>wrote you 2 minutes ago</span>
+							</div>
+						</div>
+	
+						<div class='item hoverable'>
+							<img src='assets/peter.jpg' class=''>
+							<div class='item_text '>
+								<div class='green header3'>Peter Karp</div>
+								<span class='footnote'>wrote you 37 minutes ago</span>
+							</div>				
+						</div>
+	
+						<div class='item hoverable'>
+							<img src='assets/david.jpg' class=''>
+							<div class='item_text '>
+								<div class='header3'>David Dean</div>
+								<span class='footnote'>wrote 9 hours ago</span>
+							</div>						
+						</div>
 					</div>
-					<div class='status'>
-					&#9679;
-					</div>
-				</div>
 
-				<div class='item hoverable'>
-					<img src='assets/peter.jpg' class=''>
-					<div class='item_text'>
-						<div class='header3'>Peter Karp</div>
-						<span class='footnote'>wrote you 37 minutes ago</span>
-					</div>
-					<div class='status'>
-					&#9679;
-					</div>					
-				</div>
 
-				<div class='item hoverable'>
-					<img src='assets/david.jpg' class=''>
-					<div class='item_text'>
-						<div class='header3'>David Dean</div>
-						<span class='footnote'>replied 2 minutes ago</span>
+					<div class='dropdown' onclick='$(".dropdown_options").toggleclass("open")'>
+		
+						<div class='secondary_subsection_no_border subsection_head'>
+							Replied messages (2)
+							<span class='right arrow'>&#9660;</span>
+						</div>		
+		
+						<div class='dropdown_options'>				
+							<div class='item hoverable read'>
+								<img src='assets/seton.jpg' class=''>
+								<div class='item_text'>
+									<div class='header3'>Seton McAndrews</div>
+									<span class='footnote'> you've replied</span>
+								</div>
+							</div>
+							<div class='item hoverable read'>
+								<img src='assets/sabrina.jpg' class=''>
+								<div class='item_text'>
+									<div class='header3'>Sabrina Lowell</div>
+									<span class='footnote'>you've replied</span>
+								</div>			
+							</div>					
+						</div>
+						
 					</div>
-					<div class='status'>
-					&#9679;
-					</div>					
 				</div>
-				
-				<div class='item hoverable read'>
-					<img src='assets/sabrina.jpg' class=''>
-					<div class='item_text'>
-						<div class='header3'>Sabrina Lowell</div>
-						<span class='footnote'>you've replied</span>
-					</div>
-					<div class='status'>
-					&#x2713;
-					</div>					
-				</div>				
-
-				<div class='item hoverable read'>
-					<img src='assets/seton.jpg' class=''>
-					<div class='item_text'>
-						<div class='header3'>Seton McAndrews</div>
-						<span class='footnote'> you've replied</span>
-					</div>
-					<div class='status'>
-					&#x2713;
-					</div>					
-				</div>
-
-				</div>
-			</div>
+						
+			</div>			
 		</div>
 		
 		<div id='main'>

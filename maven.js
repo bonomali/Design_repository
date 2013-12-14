@@ -42,7 +42,7 @@ window.addEventListener("load",function() {
 $('.advisor_entry').attr('onclick', "location.href='advisor.html'");
 
 //tooltips
-$('.maven_score').prepend('<span class="tooltip">Average user rating (out of 5 stars maximum)</span>');
+$('.maven_score').prepend('<span class="tooltip">Maven rank (click for details)</span>');
 $('.match_percentage').prepend('<span class="tooltip">Match percentage measures how closely this advisor aligns with your goals</span>');
 
 
@@ -193,6 +193,11 @@ function confirm_followup() {
 
 // Inbox functionality
 
+function read_message(target) {
+	$('.item').removeClass('active');
+	$(target).addClass('active');
+}
+$('.item').attr('onclick','read_message(this)');
 function reply_message() {
 	$('.followup_button').attr('style','display:none');
 	$('.followup_entry').attr('style','display:inline');	
