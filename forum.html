@@ -39,7 +39,11 @@
 		<span class='header1'>Question forum</span>
 		<br><br>
 
-				<div id='dropdown' class='secondary_subsection' onclick='$("#dropdown_options").toggleclass("open")'>
+				<form name="input" class='secondary_subsection'action="html_form_action.asp" method="get">
+					<input type="text" name="user" placeholder='Search questions' style='width:67%;' class='footnote seamless'>
+					<a class='inline right search_icon' style=''>&#9906</a>
+				</form>		
+				<div class='secondary_subsection dropdown' onclick='$("#dropdown_options").toggleclass("open")'>
 					<div class='subsection_head'>Sort Results<span class='right arrow'>&#9660;</span></div>
 					
 					<div class='footnote dropdown_options'>
@@ -68,7 +72,7 @@
 					</div>
 				</div>
 
-				<div id='dropdown'  class='secondary_subsection' onclick='$("#dropdown_options").toggleclass("open")'>
+				<div class='secondary_subsection dropdown' onclick='$("#dropdown_options").toggleclass("open")'>
 					<div class='subsection_head'>Filter by topic<span class='right arrow'>&#9660;</span></div>
 					
 					<div class='footnote filter dropdown_options' id=''>
@@ -77,14 +81,9 @@
 								<bullet>&#9679;</bullet><span> Include All</span>
 						</label>					
 					</div>
-				</div>	
-				
-			<form name="input" class='secondary_subsection'action="html_form_action.asp" method="get">
-				<input type="text" name="user" placeholder='Search by name' style='width:67%;' class='footnote seamless'>
-				<a class='inline right text_button' style=''>Search</a>
-			</form>										
+				</div>					
 			<br>
-			<a class='primary button' onclick='show_modal(".ask")'>Ask a Question</a>
+			<a class='primary button' onclick='show_modal(".ask")'>Ask a New Question</a>
 
 		</div>	
 		<div id='main'>

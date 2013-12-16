@@ -208,14 +208,28 @@ form {
 	float: left;
 	width: 150px;
 }
-	.text_button {
-		font-size: 0.9em;
+	.search_icon {
+		font-size: 1.2em;
 		text-transform: uppercase;
 		line-height: normal;
 		color:#999;
+		margin-top: -6px;
+		-webkit-transform: rotate(-40deg);
+		transition: all .5s;
 		
+		&:active{
+		}
 	}
 }
+
+
+
+input:focus + .search_icon {
+		font-size:1.25em;
+		margin-top: -7px;
+
+	}
+
 
 .tooltip {
 	text-align: left;
@@ -800,7 +814,7 @@ border-left: 5px solid $light_green;
 .list {
 	margin-top: 15px;
 	.active {
-		border-right:5px solid $light_green;
+		border-left:5px solid $light_green;
 	}	
 	
 	.item {
@@ -813,13 +827,13 @@ border-left: 5px solid $light_green;
 			height:40px;
 			margin-right: 10px;
 			display:inline-block;
-	}
+			}
 
 		div {
 			display: table-cell;
 			vertical-align: middle;
 			width:90%
-	}
+			}
 	}
 	
 
@@ -830,6 +844,7 @@ border-left: 5px solid $light_green;
 		color:$light_green;
 	
 	}
+	
 	.read  {
 		background:none;
 	}
@@ -843,13 +858,22 @@ border-left: 5px solid $light_green;
 		transition: all 0.1s;
 		&:hover {
 			background-color: white;
-			padding-left:0px;
+			padding-left:10px;
 		}
 		
 		&:focus {
 			border-right: 5px solid $light_green;
 		}
 		}		
+}
+
+.inbox_message {
+	padding-top:15px;
+	border-top: 1px solid #eee;	
+	
+	&:last-child {
+	border-bottom: 1px solid #ccc;
+	}
 }
 
 
@@ -1009,13 +1033,13 @@ bullet {
 }
 
 .arrow {
-	font-size: 0.7em;
+	font-size: 0.75em;
 	margin-top: 1px;
 	-webkit-transition:all 0.5s;
     transition: 0.5s;	
 }
 
-#dropdown:hover .arrow {
+.dropdown:hover .arrow {
 	opacity:0;
 }
 /* Account Settings page */
@@ -1244,6 +1268,10 @@ margin-left:0px;
 	text-align: left;	
 }
 
+.comment_body {
+	padding:20px 15px;
+
+}
 }
 
 
