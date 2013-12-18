@@ -154,6 +154,12 @@ body{
 	}
 }
 /*Typography*/
+
+p {
+	-webkit-margin-before: 0.5em;
+	-webkit-margin-after:0.5em;
+	line-height: 1.3em;
+}
 b {
 	font-family:Proxima-Nova-bold;
 	
@@ -166,6 +172,7 @@ pop {
 .header1 {
 	font-family: Adelle_Light;
 	font-size: 2em;
+	line-height: 1.2em;	
 	padding:15px 0px 15px 0px;
 	}
 
@@ -213,8 +220,10 @@ form {
 		text-transform: uppercase;
 		line-height: normal;
 		color:#999;
+		-webkit-text-stroke: 0.5px #999;
 		margin-top: -6px;
 		-webkit-transform: rotate(-40deg);
+		-moz-transform: rotate(-40deg);		
 		transition: all .5s;
 		
 		&:active{
@@ -227,6 +236,7 @@ form {
 input:focus + .search_icon {
 		font-size:1.25em;
 		margin-top: -7px;
+		-webkit-text-stroke: 0.5px $light_green;
 
 	}
 
@@ -1230,6 +1240,10 @@ bullet {
 
 .open {
 	padding: 0px;
+}
+
+.secondary_subsection {
+padding: 12px;
 }
 }
 
