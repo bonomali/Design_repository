@@ -499,7 +499,6 @@ margin-left:5px;
 		background-color: #fafafa;
 		&:hover {
 			background-color: white;
-			outline: 1px solid $light_green;
 		}
 	}
 }
@@ -511,11 +510,27 @@ margin-left:5px;
   	border-bottom:1px solid #eee;
 }
 
+
+//Forum page
 .question_entry {
-		background-color:white;
 	  	border-bottom:1px solid #eee;
-	  	padding:10px;
+	  	padding:15px 12px;
 }
+
+.question_text {
+	margin-right:45px;
+	float:left;
+}
+
+.participant_avatars {
+	white-space: nowrap;
+	width:180px;
+	img {
+	width:30px;
+	}
+}
+
+
 .search_header {
 	background-color:#aaa;
 	border-bottom: 1px solid #aaa;
@@ -657,6 +672,7 @@ margin-left:5px;
 .search_result {
 	cursor:hand;
 	border: 1px solid #ddd;
+	background-color: white;
 }
 
 .half {
@@ -868,7 +884,6 @@ border-left: 5px solid $light_green;
 		transition: all 0.1s;
 		&:hover {
 			background-color: white;
-			padding-left:10px;
 		}
 		
 		&:focus {
@@ -1070,7 +1085,18 @@ bullet {
 	margin: 40px 0px 20px 0px;
 }
 
-
+@media only screen and (max-width: 900px) {
+	#header {
+		padding:0px 9px;
+	}
+	.container {
+	padding: 0px 9px;
+}
+	.participant_avatars {
+		display:none;
+	}
+	
+}
 @media only screen and (max-width: 850px) and (min-width: 768px){
 	#main {
 		width:65%;
@@ -1078,14 +1104,8 @@ bullet {
 }
 
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) {			//Below iPad portrait width
 
-.container {
-	padding: 0px;
-}
-.mobile_container {
-	padding: 0px 12px;
-}
 #header {
 	margin-bottom: 20px;
 }
