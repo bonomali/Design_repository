@@ -52,6 +52,7 @@ function show_city() {
 	$('.zip').hide();
 	$('.city').show();
 	$('.close').removeClass('open');						//close button show/hide
+	$('.plane').addClass('open');						//plane button show/hide	
 	$('#near').removeClass('ellipsis');
 	
 }
@@ -64,6 +65,8 @@ function change_zip() {
 	$('#zip').val('');							//clear ZIP code field for next entry
 	$('#zip').attr('placeholder','(enter ZIP code)');                    //in case placeholder got changed to error statement, change it back
 	$('.close').toggleClass('open');						//close button show/hide
+	$('.plane').toggleClass('open');						//close button show/hide
+	
 }
 
 $('#zip').keyup(function() {
@@ -211,7 +214,7 @@ function reply_message() {
 window.niches= ['Baby boomers','Business owners','Independent women','Inheritors','LGBT community','Married couples','Parents','Retirees','Young professionals']
 
 for (var i=0; i<niches.length; i++) 
-	{	$('#niche').append('<span class=" ck-button choices"><label><input type="checkbox" value="1"><span class="half">'+niches[i]+'</span></label></span>');
+	{	$('#niche').append('<label class="choices"><input class="ck-button" type="checkbox" value="1"><span class="">'+niches[i]+'</span></label>');
 	} 
 	
 window.specialties= ['Investments', 'Financial Planning', 'Retirement Plans', 'Budget/Debt Management', '401(K)/403(B)/IRAS', 'Taxes And Accounting', 'Real Estate', 'Insurance', 'Estate Planning', 'Choosing An Advisor']
