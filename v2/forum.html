@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="main.css">
+	<meta name="viewport" content="width=device-width" />
+	<script src='jquery-1.9.1.min.js'></script>
+</head>
+<body>
+	<div class='ask modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+			
+			
+				<span class='section_head'>Ask a question</span>
+				Question summary (80 characters max):
+				<input type='text' class='full text_input' maxlength="80" placeholder='(e.g. "Can I use my 401(k) to invest in real estate?")'>
+				Details and specifics:
+				<textarea rows='6' class='full text_input' placeholder='Elaborate your question here'></textarea>
+	
+				Add to category
+				<div class='metric_text' id='specialty'>
+				</div>
+										      
+				<div class="half">
+					<a class="secondary paired button" onclick='hide_modal()'>Cancel</a>
+					<a class="primary paired button" onclick='hide_modal()'>Submit</a>
+				</div>			
+				
+											     
+			</div>	
+		</div>
+	</div>
+		<div id='header'>
+		</div>
+	<div class='container'>
+
+		
+		<div id="sidebar">
+		<span class='header1'>Question forum</span>
+
+
+				<form name="input" class='secondary_subsection'action="html_form_action.asp" method="get">
+					<input type="text" name="user" placeholder='Search questions' style='width:67%;' class='footnote seamless'>
+					<a class='inline right search_icon' style=''>&#9906</a>
+				</form>		
+				<div class='secondary_subsection dropdown' onclick='$("#dropdown_options").toggleclass("open")'>
+					<div class='subsection_head'>Sort Results<span class='right arrow'>&#9660;</span></div>
+					
+					<div class='footnote dropdown_options'>
+					
+					
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="1" checked>
+							      <bullet>&#9679;</bullet>
+							      <span>Recently asked</span>
+								</label>
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="3">
+							      <bullet>&#9679;</bullet>
+							      <span>Recently answered</span>
+								</label>								
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="2" >
+							      <bullet>&#9679;</bullet>
+							      <span>Popularity</span>
+								</label>
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="4">
+							      <bullet>&#9679;</bullet>
+							      <span>Most responses</span>
+								</label>
+					</div>
+				</div>
+
+				<div class='secondary_subsection dropdown' onclick='$("#dropdown_options").toggleclass("open")'>
+					<div class='subsection_head'>Filter by topic<span class='right arrow'>&#9660;</span></div>
+					
+					<div class='footnote filter dropdown_options' id=''>
+						<label>
+							<input class="ck-button topic" type="checkbox" name="filter" value="1" checked>
+								<bullet>&#9679;</bullet><span> Include All</span>
+						</label>					
+					</div>
+				</div>					
+			<br>
+			<a class='primary button' onclick='show_modal(".ask")'>Ask a New Question</a>
+
+		</div>	
+		<div id='main'>
+							<div id='specialty'></div>
+
+			<div class='search_result'>
+				<div class='question_entry hoverable' onclick="location.href='question.html';">
+					<div class='table'>
+						<div class='cell question_text'>
+							<span class='header2'>Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<div class='footnote'>asked 6 days ago, filed under <b>Retirement</b>, <b>Real estate</b></div>					
+						</div>
+						<div class='cell participant_avatars '>
+							<span class='footnote'></span>
+							<img src='assets/david.jpg'>
+							<img src='assets/seton.jpg'>
+							<img src='assets/kathleen.jpg'>
+						</div>
+					</div>	
+				</div>				
+				<div class='question_entry hoverable' onclick="location.href='question.html';">
+					<div class='table'>
+						<div class='cell question_text'>
+							<span class='header2'>Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<div class='footnote'>asked 6 days ago, filed under <b>Retirement</b>, <b>Real estate</b></div>					
+						</div>
+						<div class='cell participant_avatars '>
+							<span class='footnote'></span>
+						
+							<img src='assets/seton.jpg'>
+							<img src='assets/kathleen.jpg'>
+						</div>
+					</div>	
+				</div>				
+				
+				<div class='question_entry hoverable' onclick="location.href='question.html';">
+					<div class='table'>
+						<div class='cell question_text'>
+							<span class='header2'>Can I use my 401(k) to invest in real estate? Can I use my 401(k) to invest in real estate?</span>
+							<div class='footnote'>asked 6 days ago, filed under <b>Retirement</b>, <b>Real estate</b></div>					
+						</div>
+						<div class='cell participant_avatars '>
+							<span class='footnote'></span>
+							
+							<img src='assets/peter.jpg'>
+							<img src='assets/sabrina.jpg'>
+							<img src='assets/david.jpg'>
+							<img src='assets/seton.jpg'>
+							<img src='assets/kathleen.jpg'>
+						</div>
+					</div>	
+				</div>				
+			</div>
+		</div>
+	</div>
+	
+	<script src='maven.js'></script>
+
+</body>

@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="main.css">
+	<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+	<script src='jquery-1.9.1.min.js'></script>
+</head>
+<body>
+	<div class='questionnaire modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Improve your matches</span>
+				<p><pop>2 of 15</pop><br>Are you looking for help in any specific areas? We can match you with experts who are highly rated in these specialties.</p>
+				<div class='metric_text' id='specialty'>
+				</div>
+				<p><pop>4 of 15</pop><br>How financially savvy do you consider yourself?</p>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="7" data-highlight="true">
+						<span style="margin-top:30px"> not at all <span class=" right"> extremely</span></span>
+				</div>
+				<div class='half' style='margin-top:20px'>
+					<a class='secondary paired button' onclick='hide_modal()'>Close</a>
+					<a class='primary paired button'>Next</a>					
+				</div>	
+			</div>		
+		</div>
+	</div>
+	<div class='compose modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Compose message</span>
+				To:<pop id='advisor_name'> (list of recipients here) </pop>
+				<p>
+				<textarea rows='6' class='full text_input' placeholder='Write your message here'></textarea>
+				</p>
+				<div class='half'>
+					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
+					<a class='primary paired button' onclick='send_message()'>Send</a>					
+				</div>	
+			</div>		
+		</div>
+	</div>
+	
+	
+	<div id='bottom_banner' onclick='show_modal(".questionnaire")'>
+
+			<span ><pop>Get better matches</pop> Take the match questionnaire</span>
+	</div>
+		<div id='header'>
+		</div>
+	<div class='container'>
+		<div id="sidebar">
+			<span class='header1'>Advisor search</span>
+
+
+		<div>
+			<div id='location' class='secondary_subsection'>
+				<span class='inline right plane open' onclick='change_zip()'>&#9992</span>
+				<span class=' right cell close' onclick=''>&#10005</span>
+				<div class='footnote'>
+					<span id='near'>Near</span>
+					<span class='city open' onclick='change_zip()' id='city'>San Francisco, CA</span>
+					<input type="tel" name="zipcode" id="zip" placeholder='(enter ZIP code)' style='margin-top:1px;width:160px; font-size:inherit' class='text_input seamless footnote zip' onblur='show_city()'>			
+
+					<span class='error'></span>
+				</div> 
+			</div>		
+
+			
+
+			<form name="input" class='secondary_subsection'action="html_form_action.asp" method="get">
+				<input type="text" name="user" placeholder='Search by name' style='width:92%; margin-top:1px;' class='footnote seamless'>
+				<a class='inline right search_icon' style=''>&#9906</a>
+			</form>	
+			<div class='secondary_subsection dropdown' onclick='$(".dropdown_options").toggleclass("open")'>
+
+				<div class='subsection_head'>Sort Results<span class='right arrow'>&#9660;</span></div>		
+
+				<div class='dropdown_options footnote'>				
+					<label>
+						<input class="ck-button" type="radio" name="sort" value="1" checked>
+							      <bullet>&#9679;</bullet>
+							      <span> Best match</span>
+					</label>
+					<label>
+							      <input class="ck-button" type="radio" name="sort" value="3">
+							      <bullet>&#9679;</bullet>
+							      <span>Closest to me</span>
+								</label>								
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="2" >
+							      <bullet>&#9679;</bullet>
+							      <span> Highest Maven score</span>
+								</label>
+								<label>
+							      <input class="ck-button" type="radio" name="sort" value="4">
+							      <bullet>&#9679;</bullet>
+							      <span>Most responsive</span>
+					</label>
+				</div>
+			</div>
+		
+		</div>		
+							<div class='secondary_body'>
+				<div class='subsection_head green'>Improve your results</div>
+				<div class='footnote'>
+					Are you seeking ongoing financial guidance, or one-time help with a specific life event?
+				</div>
+				<form class='metric_text'>
+					<input type='radio'name="answer" value="1"><span>ongoing</span>
+					<input type='radio'name="answer" value="2"><span>one-time</span>
+				</form>	
+				
+				<a class='button primary' onclick='show_modal(".questionnaire")'>Get better matches</a>
+			</div>
+	</div>
+		
+		<div id='main'>
+			<div class='search_result'>
+				<div class='hoverable advisor_entry' >
+						<div class='table'>
+							<img src='assets/peter.jpg' class='advisor_pic cell'>
+							<div class='name_block cell'>
+								<span class='header2'>Peter Karp</span> 
+								<br>
+								<span class='footnote place'>San Francisco, CA <br></span>
+								<span class='footnote'>Specializes in <pop>investments</pop></span>
+		
+							</div>
+							<div class='niche cell footnote'>
+								Rated highly by <br>	<pop>business owners, retirees</pop>
+							</div>
+							<span  class='numbers cell'>
+								<span class='match_percentage'>?? match</span>						
+								<span class='maven_score'>Veteran</span>	
+							</span>
+						</div>				
+					</div>
+				<div class='hoverable advisor_entry'>
+				<div class='table'><img src='assets/david.jpg' class='advisor_pic cell'>
+	
+						<span class='name_block cell'>
+							<span class='header2'>David Dean</span> 
+							<br>
+							<span class='footnote place'>Berkeley, CA <br></span>
+							<span class='footnote'>Specializes in <pop>retirement</pop></span>
+	
+						</span>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>baby boomers</pop>
+						</div>
+						<span  class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>Regular</span>	
+						</span>
+</div>				</div>
+
+				<div class='hoverable advisor_entry'>
+				<div class='table'><img src='assets/kathleen.jpg' class='advisor_pic cell'>
+	
+						<span class='name_block cell'>
+							<span class='header2'>Kathleen Hentges</span> 
+							<br>
+							<span class='footnote place'>Oakland, CA <br></span>
+							<span class='footnote'>Specializes in <pop>investments</pop></span>
+	
+						</span>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>parents</pop>
+						</div>
+						<span  class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>Elite</span>	
+						</span>
+</div>				</div>
+
+				<div class='hoverable advisor_entry'>
+				<div class='table'><img src='assets/sabrina.jpg' class='advisor_pic cell'>
+	
+						<span class='name_block cell'>
+							<span class='header2'>Sabrina F. Lowell</span> 
+							<br>
+							<span class='footnote place'>San Francisco, CA <br></span>
+							<span class='footnote'>Specializes in <pop>charity</pop></span>
+	
+						</span>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>women</pop>
+						</div>
+						<span class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>Regular</span>	
+						</span>
+</div>				</div>
+
+				<div class='hoverable advisor_entry'>
+				<div class='table'><img src='assets/seton.jpg' class='advisor_pic cell'>
+	
+						<span class='name_block cell'>
+							<span class='header2'>Seton McAndrews</span> 
+							<br>
+							<span class='footnote place'>San Francisco, CA <br></span>
+							<span class='footnote'>Specializes in <pop>retirement</pop></span>
+	
+						</span>
+						<div class='niche cell footnote'>Rated highly by <br>	<pop>inheritors, baby boomers</pop>
+						</div>
+						<span  class='numbers cell'>
+							<span class='match_percentage'>?? match</span>						
+							<span class='maven_score'>Veteran</span>	
+						</span>
+</div>				</div>
+			</div>	
+	
+	</div>
+	</div>	
+	<script src="http://ziplookup.googlecode.com/git/public/ziplookup/zipLookup.min.js" type="text/javascript"></script>	
+	<script src='maven.js'></script>
+ 
+</body>

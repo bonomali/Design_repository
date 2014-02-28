@@ -1,0 +1,219 @@
+<html lang="en">
+
+<head>
+<link rel="stylesheet" href="main.css">
+<meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+
+	<div class='compose modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Compose message</span>
+				To: <pop id='advisor_name'> Kathleen Hentges</pop>
+				<p>
+				<textarea rows='6' class='full text_input' placeholder='Write your message here'></textarea>
+				</p>
+				<div class='half'>
+					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
+					<a class='primary paired button' onclick='send_message()'>Send</a>					
+				</div>	
+			</div>		
+		</div>
+	</div>
+
+	<div class='firm modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>Edit firm</span>
+				Firm and address:				
+				<p>
+				<textarea rows='4' class='full text_input' placeholder=''></textarea>
+				</p>
+				<div class='half'>
+					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
+					<a class='primary paired button' onclick='send_message()'>Send</a>					
+				</div>	
+			</div>		
+		</div>
+	</div>
+	<div class='rate modal'>
+		<div id='fader'></div>
+		<div class='modal_window' id='profile'>
+			<div class='subsection'>
+				<span class='section_head'>rate this advisor</span>
+				<p>Would you recommend this advisor to a friend?</p>
+				<br>
+				<div class='metric_text'>
+						<input type="range" class="range" min="0" max="5" data-highlight="true">
+						<span style="margin-top:30px"> not at all <span class=" right"> strongly</span></span>
+				</div>
+				<br>
+				<div class='half'>
+					<a class='secondary paired button' onclick='hide_modal()'>Cancel</a>
+					<a class='primary paired button'>OK</a>					
+				</div>	
+			</div>		
+		</div>
+	</div>
+	<div id='top_banner'>Message sent</div>
+	<div id='header'>
+	</div>
+	<div class='container'>
+	
+		<div id='profile'>
+	<div class='subsection'>
+	
+		<p>
+			<div class='right standard'>
+		 	 	<a class=' secondary button' onclick='show_modal(".rate")'>Rate advisor</a>
+			 	<a class='  primary button' onclick='show_modal(".compose")'>Contact</a>
+			</div>	
+			<div class='advisor_full'>
+				<img src='assets/kathleen.jpg'>
+				<div id='picture_edit' class='metric_text green' onclick="$('input[type=file]').trigger('click');">Upload new picture</div><input type="file"style="visibility:hidden" />
+			</div>	
+			<span class='green header1'>Kathleen A. Henteges <span><span class='tooltip'>This advisor has a clean FINRA record</span><img src='assets/approved.png' class='approved'></span></span> <br>
+			<div id='bio' onclick='alert("modal to edit bio here")'><i>I enjoy helping people achieve their financial goals.</i></div>
+			
+			<div class='' >
+	
+				Specializes in <pop>investments</pop>,
+				recommended by <pop>parents</pop>
+			</div>
+			<div>
+				<div class='match badge'>
+				<span class='tooltip'>how this advisor aligns with your needs</span>								
+				<div class="left big_number">94% </div>
+				<div class='small right '>advisor <br>match</div>
+			</div>
+			<div class='maven badge'>
+				<span class='tooltip'>Quality of this advisor's contribution as judged by the MavenMarket community</span>			
+				<div class="left big_number">&#10029&#10029&#10029 </div>
+				<div class='small right '>veteran <br>contributor</div>
+			</div>			
+
+			</div>
+		</p>
+		
+	</div>
+	<div class='subsection'>
+	
+		<span class='section_head'>Recently answered questions</span>
+		
+		<div class='comment'>	
+			<img src="assets/kathleen.jpg" class="avatar">	
+			<div class="comment_text">
+			<div class="comment_header">
+				<span class="header2">I would like to know if I could cash out my 401k?</span>
+			</div>
+			<div class="comment_body">
+		If you are still employed by the company that sponsors your 401k plan then you will not be eligible to cash out of the plan. Instead, you can see if your plan offers a loan provision, hardship withdrawal or in service withdrawals. Not all plans offer these features so you will need to check with your employer. If you are no longer employed by the company that sponsors your 401k plan, then you are eligible to get your money out of your 401k plan. 
+		<br><br>
+		You can cash out of the plan or rollover your 401k plan balance to an IRA. If you choose to rollover your 401k plan instead of cashing out, you will not have to pay taxes or penalty taxes as rollovers to IRAs are not taxable transactions if you do them the right way. If you must cash out of your 401k plan and you have not yet reached age 59 1?2 then the dollar amount you cash out will be subject to ordinary income taxes and a 10% penalty tax. Talk to the advisor for your plan to determine the best options for you.
+			</div>
+		</div>
+	</div>
+	<div class='comment'>
+		<img src="assets/kathleen.jpg" class="avatar">	
+		<div class="comment_text">
+			<div class="comment_header">
+				<span class="header2">If my employer files for bankruptcy will my 401k fund be frozen for any amount of time?</span>
+			</div>
+			<div class="comment_body">
+Workers in bankruptcy situations face two important issues when it comes to their retirement benefits: access to pension benefits and the continued safety of their pension assets. Generally, your pension assets should not be at risk when a business declares bankruptcy, because ERISA requires that promised pension benefits be adequately funded and that pension monies be kept separate from an employer’s business assets and held in trust or invested in an insurance contract. Thus, if an employer declares bankruptcy, the retirement funds should be secure from the company’s creditors. In addition, plan fiduciaries must comply with the ERISA provisions that prohibit the mismanagement and abuse of plan assets. If contributions to a plan have been withheld from your pay, you may want to confirm that the amounts deducted have been forwarded to the plan’s trust or insurance contract. 			
+			</div>
+		</div>
+	</div>
+
+	<div class='comment'>	
+		<img src="assets/kathleen.jpg" class="avatar">	
+		<div class="comment_text">
+			<div class="comment_header">
+				<span class="header2">How can I ensure that my next advisor is worth his/her commission?</span>
+			</div>
+			<div class="comment_body">
+				<p>
+				Here are some of the questions you should always ask when hiring any financial professional: 
+				</p>
+				<p>-What experience do you have, especially with people in my circumstances? -Where did you go to school? What is your recent employment history? </p>
+				<p>-What licenses do you hold? Are you registered with the SEC, a state, or the Financial Industry Regulatory Authority (FINRA )? </p>	
+				<p>-What products and services do you offer? -Can you only recommend a limited number of products or services to me? If so, why? </p>		
+				<p>
+				-How are you paid for your services? What is your usual hourly rate, flat fee, or commission? -Have you ever been disciplined by any government regulator for unethical or improper conduct or been sued by a client who was not happy with the work you did? </p>
+				<p>-For registered investment advisers, will you send me a copy of both parts of your Form ADV? -Does an independent custodian hold my assets?	</p>
+				
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+
+
+
+	<div class='subsection'>
+		<span class='section_head'>Employment and compliance history</span>
+			<p>				<span class='green' onclick="show_modal('.firm')">Add new firm</span></p>
+			<p>
+				August 2011 - Present
+				<pop>UBS Financial Services</pop> <span class='footnote'>55 California Street, San Francisco, CA 94111</span>
+				<div class='green disclosures' onclick='$(".ubs").show(); $(this).remove()'>Show 3 disclosures</div>
+				<div class='footnote disclosures ubs' style='display:none'>
+					<div><b>February 4, 2013</b> Customer complaint <a onclick='$("#report").fadeIn();	$(window).scrollTop($(document).height()+1000);'>(See report)</a></div>
+					<div id='report'>
+					<div class='row'>
+						<div class='header3 cell'>Allegations</div> 
+						<p class='cell footnote' style='text-transform:capitalize'>TIME FRAME?NOVEMBER 2007 - SEPTEMBER 2008 CLAIMANT ALLEGES THAT HER INVESTMENTS IN PRINCIPAL-PROTECTED STRUCTURED PRODUCTS WERE MISREPRESENTED AS SAFE AND INFALLIBLE. CLAIMANT FURTHER ALLEGES THAT THE STRUCTURED PRODUCTS WERE UNSUITABLE IN LIGHT OF HER CONSERVATIVE INVESTMENT OBJECTIVES.</p>
+					</div>
+					<div class='row'>				
+						<div class='header3 cell'>Product type</div> 
+						<p class='cell footnote'>Other: STRUCTURED PRODUCTS</p>
+					</div>
+					<div class='row'>	
+						<div class='header3 cell'>Alleged Damages</div>
+						<p class='cell footnote'> $300,000</p>
+					</div>
+					<div class='row'>					 
+						<div class='header3 cell'>Settlement Amount</div> 
+						<p class='cell footnote'>$95,000</p>
+					</div>
+					<div class='row'>					
+						<div class='header3 cell'>Summary</div> 
+						<p class='cell footnote'>Claimants have not asserted any claims against me, are not seeking any award against me, and have not named or joined me as a respondent in this action. All claims are asserted against UBS Financial Services and not against me. This in their claim, claimants specifically state that "claimants firmly believe that their broker did not intentionally mislead them, but rather was an innocent conduit for the firm's recommendations." The matter has now been resolved between UBS and claimants. Consistent with the lack of any claims against me, I have neither been asked, nor directed, to contribute any amount towards the resolution.</p>
+					</div>
+				</div>
+					<div><b>December 11, 2012</b> Customer complaint <a>(See report)</a></div>
+					<div><b>October 24, 2011</b> Customer complaint <a>(See report)</a></div>
+				</div>
+			</p>
+
+			<p>
+				March 2004 - May 2011
+				<pop>Morgan Stanley</pop> <span class='footnote'>522 5th Ave #15, New York, NY 10036</span>
+				<div class='green disclosures' onclick='$(".ubs").show(); $(this).remove()'>Show 1 disclosure</div>
+			</p>
+
+			<p>
+				July 1998 - December 2010
+				<pop>Lehman Brothers</pop> <span class='footnote'>700 S Flower Street Lowr
+Los Angeles, CA 90017</span>
+				<div class='green disclosures' onclick='$(".ubs").show(); $(this).remove()'>Show 3 disclosures</div>
+
+				<div class='footnote disclosures'>
+
+				</div>
+			</p>						
+	</div>		
+</div>	
+		<script src='jquery-1.9.1.min.js'></script>
+		<script src='maven.js'></script>
+
+	</div>		
+
+</body>
+
+</html>
